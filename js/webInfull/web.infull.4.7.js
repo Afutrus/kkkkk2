@@ -546,7 +546,7 @@ var WebInfull = {
         }
 
         $("#userId").html(WebInfull.payUserId);
-        $("#nickname").html(nickname);
+        $("#nickName").html(nickname);
         $("#goldNum").html(displayGoldNum);
         $("#payMoney").html(displayPrice);
         $("#thickdiv2").show();
@@ -675,7 +675,7 @@ var WebInfull = {
                     WebInfull.payUrl = data.data.infullUrl;
                     WebInfull.centerInfullType = data.data.centerInfullType;
                     WebInfull.requestFlag = false;
-                    WebInfull.showOrderConfirm(data.data.nickname);
+                    WebInfull.showOrderConfirm(data.data.nickName);
 
                 } else {
                     if (data.message) {
