@@ -1,0 +1,3159 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>Online Game</title>
+    <meta name="keywords" content="HGI,HDI, HDG, HD, Leon, Dona">
+    <meta name="description" content=" It is a game collection.">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+<style type="text/css">
+    .footer,.footer-land{bottom:.2rem;left:0;width:100%;}
+    .footer a,.footer-land a{float:left;background-size:cover;background-repeat:no-repeat;}
+    .footer a.icoFaceBook,.footer-land a.icoFaceBook{margin:0 .22rem .24rem .4rem;width:.62rem;height:.62rem;background-image:url(/images/website/ico_facebook.png);}
+    .footer a.icoMail,.footer-land a.icoMail{width:.62rem;height:.63rem;background-image:url(/images/website/ico_mail.png);}
+    .footer a.icoIns,.footer-land a.icoIns{margin-left:.2rem;width:.63rem;height:.63rem;background-image:url(/images/website/ins.png);}
+    .footer a.discordIns,.footer-land a.discordIns{margin-left:.2rem;width:.63rem;height:.63rem;background-image:url(/images/website/ico_discord.png);}
+    .footer a.icoTop,.footer-land a.icoTop{float:right;margin-right:.1rem;width:.58rem;height:.58rem;background-image:url(/images/website/ico_top.png);}
+    .footer .itemText,.footer-land .itemText{clear:both;color:#45b7bb;text-align:center;}
+
+    .landContent .footer{position:static;box-sizing:border-box;padding-top:.3rem;height:1.81rem;background:url(/images/website/bg_footer.jpg) no-repeat;background-size:auto;background-size:100% 100%}
+
+    .footer a.icoMail{ display: block;}
+    .footer .ico-list{ display: flex; display: -webkit-flex; -webkit-justify-content: center; justify-content: center;}
+    .footer .mail-detail{ clear: both; display: flex; display: -webkit-flex; -webkit-align-items: center; -webkit-justify-content: center; align-items: center; justify-content: center;}
+    .footer .mail-detail .text{ margin: 0 .25rem 0 .1rem; width: 5.05rem; color: #45b7bb; font-size: .2rem;}
+    .footer .href-list{ display: flex; display: -webkit-flex; margin-top: .1rem; color: #00b5a9; font-size: .18rem; -webkit-justify-content: space-around; justify-content:space-around;}
+    .footer .href-list a{  color: #00b5a9; text-decoration: underline;}
+</style><link rel="stylesheet" type="text/css" href="/css/swiper-4.2.2.min.css">
+<style type="text/css">
+    body, html {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #21a396;
+    }
+    body::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/images/website/new2025/bg_after.png) repeat;
+        background-size: 7.2rem 1.05rem;
+        pointer-events:none;
+    }
+    section{
+        position: relative;
+        margin: 0 auto;
+        width: 7.2rem;
+        min-height: 100%;
+        background: -webkit-linear-gradient(#6cf2ca 11%, #4acba5 51%, #22a59a 92%);
+        background: linear-gradient(#6cf2ca 11%, #4acba5 51%, #22a59a 92%);
+    }
+
+    .df {
+        display: flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bg {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    @-webkit-keyframes show {
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .wrapper {
+        margin: 0 auto;
+        width: 7.2rem;
+        color: #008a73;
+        font-size: .16rem;
+        background-image: url(/images/website/new2025/bg.png);
+        background-size: 7.2rem 7.4rem;
+        background-position: 0 1.2rem;
+        z-index: 3;
+    }
+    .wrapper-global{
+        background-image: url(/images/website/new2025/bg_global.png);
+        background-size: 7.2rem 5.87rem;
+    }
+
+    @font-face {
+        font-family: 'NewEras';
+        src: url("/images/common/fonts/NewEras.ttf") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .logo {
+        top: 1.9rem;
+        right: .1rem;
+        width: 2.2rem;
+        height: 1.32rem;
+        background: url(/images/gw/DG_loading_logo.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .nav {
+        overflow: hidden;
+        width: 100%;
+        height: .74rem;
+        background: url(/images/website/new2025/bg_nav.gif) repeat-x;
+        background-size: .12rem .74rem;
+    }
+
+    .nav_btn {
+        position: relative;
+        /*width: 2.41rem;*/
+        flex:1;
+        height: .74rem;
+        background-repeat: no-repeat;
+        background-size: 2.41rem .74rem;
+        background-position: top center;
+    }
+    .nav-has-hgi .nav_btn{
+        flex: none;
+        background-size: 100% 100%;
+    }
+
+    .nav_btn.active::after,
+    .nav_btn:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: .03rem;
+        background: #FBFFBA;
+        box-shadow: 0 0 .05rem #FBFFBA;
+    }
+
+    .nav_btn::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: .02rem;
+        height: .74rem;
+        background: url(/images/website/new2025/bg_nav_line.png) no-repeat;
+        background-size: 100% 100%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .nav-has-hgi .nav_btn.active::after,
+    .nav-has-hgi .nav_btn:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: .03rem;
+        background: #FBFFBA;
+        box-shadow: 0 0 .05rem #FBFFBA;
+    }
+
+    .nav-has-hgi .nav_btn::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: .02rem;
+        height: .74rem;
+        background: url(/images/website/new2025/bg_nav_line.png) no-repeat;
+        background-size: 100% 100%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .nav_btn:last-of-type::before {
+        background: none
+    }
+
+    .nav_btn_recharge {
+        background-image: url(/images/website/new2025/nav_bar_01.png);
+    }
+
+    .nav_btn_recharge.active{
+        background-image: url(/images/website/new2025/nav_bar_01.png);
+    }
+
+    .nav_btn_giftcard {
+        background-image: url(/images/website/new2025/nav_bar_02.png)
+    }
+
+    .nav_btn_giftcard.active{
+        background-image: url(/images/website/new2025/nav_bar_02.png);
+    }
+
+    .nav_btn_service {
+        background-image: url(/images/website/new2025/nav_bar_03.png)
+    }
+
+    .nav_btn_service.active{
+        background-image: url(/images/website/new2025/nav_bar_03.png);
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_recharge {
+        width: 1.37rem;
+        background-image: url(/images/website/new2025/nav_bar_01_v2.png);
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_recharge.active {
+        background-image: url(/images/website/new2025/nav_bar_active_01_v2.png);
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_giftcard {
+        width: 1.89rem;
+        background-image: url(/images/website/new2025/nav_bar_02_v2.png)
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_giftcard.active {
+        background-image: url(/images/website/new2025/nav_bar_active_02_v2.png);
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_hgi {
+        width: 2.13rem;
+        background-image: url(/images/website/new2025/nav_bar_03_v3.png)
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_hgi.active {
+        background-image: url(/images/website/new2025/nav_bar_active_03_v3.png);
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_service {
+        width: 1.81rem;
+        background-image: url(/images/website/new2025/nav_bar_04_v2.png)
+    }
+
+    .nav-has-hgi .nav_btn.nav_btn_service.active {
+        background-image: url(/images/website/new2025/nav_bar_active_04_v2.png);
+    }
+
+    #wrapper-google .nav_btn_service,
+    #wrapper-global .nav_btn_service,
+    #wrapper-ios .nav_btn_service{
+        width: 100%;
+    }
+
+    .itemTopTitle {
+        margin-top: -.3rem;
+        margin-left: .15rem;
+        font-family: 'NewEras';
+        font-size: .32rem;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -webkit-align-items: flex-end;
+        align-items: flex-end;
+    }
+
+    .itemTopTitle img {
+        margin-right: .12rem;
+        width: .87rem
+    }
+
+    .itemTopTitle .text {
+        text-transform: uppercase;
+    }
+
+    .download {
+        margin: 4.8rem auto 0;
+        padding-bottom: .2rem;
+        width: 6.75rem;
+        background: linear-gradient(#eaffef, #c3fce3);
+        border: .02rem #4AFFFF solid;
+        -webkit-border-radius: .2rem;
+        border-radius: .2rem;
+    }
+
+    .download .downloadContent {
+        margin: .1rem auto 0;
+        padding: .2rem 0 .1rem;
+        width: 6.32rem;
+        background: #bef3dc;
+        font-family: 'NewEras';
+        -webkit-border-radius: .15rem;
+        border-radius: .15rem;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .download .downloadContent::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1.58rem;
+        height: 2.3rem;
+        background: url("/images/website/new2025/bg_download_after_01.png") no-repeat;
+        background-size: 100% 100%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .download .downloadContent::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2.04rem;
+        height: 1.89rem;
+        background: url("/images/website/new2025/bg_download_after_02.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .download .downloadContent-s {
+        min-height: 1.6rem;
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+
+    .download .downloadContent-s:before {
+        top: 90%;
+        left: -.3rem;
+    }
+
+    .download .downloadContent-s:after {
+        top: .2rem;
+        right: -.3rem;
+    }
+
+    .download .textHref {
+        display: block;
+        margin-right: .45rem;
+        color: #ffe899;
+        text-align: right;
+        text-decoration: underline;
+        font-size: .2rem;
+        margin-top: -.15rem
+    }
+
+    .download .itemDetail {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center; /*! border-bottom: 1px #fff solid; */
+        z-index: 2;
+    }
+
+    .download .itemDetail.btnOne p {
+        position: relative;
+        width: 4.52rem;
+    }
+
+    .download .itemDetail.btnOne a {
+        display: block;
+        margin: 0 auto;
+        width: 4.52rem;
+        height: .87rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .download .btnOne .btnDownloadGoogle a {
+        margin-right: .17rem;
+        background-image: url(/images/website/btn_012.png);
+    }
+
+    .download .btnOne .btnDownload a {
+        background-image: url(/images/website/btn_021.png);
+    }
+
+    .download .itemDetail.btnTwo p {
+        position: relative;
+        width: 2.81rem;
+        margin: 0 0.15rem;
+    }
+
+    .download .itemDetail.btnTwo a {
+        display: block;
+        margin: 0 auto;
+        width: 2.79rem;
+        height: .93rem;
+    }
+
+    .download .btnDownloadGoogle {
+        margin: 0 .2rem .3rem;
+        border-bottom: .02rem #89E1BF solid;
+        box-sizing: border-box;
+    }
+    .download .downloadContent-s .btnDownloadGoogle{
+        margin: 0;
+        border-bottom: none;
+    }
+
+    .download .btnDownloadGoogle a {
+        display: block;
+        margin: 0 auto;
+        width: 3.04rem;
+        height: 1.02rem;
+        background-image: url(/images/website/new2025/button/btn_google_download.png);
+    }
+
+    .download .btnDownload .btnDownloadSpeeder,
+    .download .btnDownload .btnDownloadSafe {
+        margin: 0 auto;
+        width: 4.59rem;
+        height: .93rem;
+        background-image: url("/images/website/new2025/button/btn_download_speeder.png");
+        z-index: 2;
+    }
+
+    .download .btnDownload .btnDownloadSafe {
+        background-image: url("/images/website/new2025/button/btn_download_safe.png");
+    }
+
+    .download .btnTwo .btnDownload {
+        margin-left: .2rem;
+    }
+
+    .download .btnTwo .btnDownload a {
+        background-image: url(/images/website/new2025/button/btn_download.png);
+    }
+
+    .download .btnTwo .btnDownloadS a { /* margin-left: .3rem; */
+        background-image: url(/images/website/new2025/button/btn_download_s.png)
+    }
+
+    .download .btnDownload .ico-shield {
+        top: -.2rem;
+        right: -.2rem;
+        width: .57rem;
+        height: .59rem;
+        background: url(/images/gw/ico_shield.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .download .btnDownload i {
+        position: absolute;
+        top: -.2rem;
+        right: -.2rem;
+        width: .53rem;
+        height: .53rem;
+        background: url(/images/website/ico_start2.png) no-repeat;
+        background-size: 100% 100%;
+        color: #ffe899;
+        text-align: center;
+        line-height: .53rem;
+    }
+
+    .download .btnDownload i.icoSpeeder {
+        top: -.15rem;
+        right: .08rem;
+        width: .86rem;
+        height: .39rem;
+        background-image: url(/images/website/new2025/ico_speeder.png);
+    }
+
+    .download .itemDetail p span,
+    .download .btnDownloadGoogle span {
+        display: block;
+        text-align: center;
+        font-size: .22rem;
+        margin-bottom: .05rem;
+    }
+
+    .download .downloadRule {
+        margin: .25rem .3rem 0;
+        font-size: .26rem;
+        line-height: 1;
+        padding-top: .05rem;
+    }
+
+    .download .downloadRule .itemTitle {
+        text-align: center;
+        font-size: .26rem;
+        margin-bottom: .15rem;
+        width: auto;
+        font-family: 'NewEras';
+    }
+
+    .download .downloadRule .itemTitle::before,
+    .download .downloadRule .itemTitle::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 1.63rem;
+        height: .16rem;
+        background: url("/images/website/new2025/download_title_before.png") no-repeat;
+        background-size: 100% 100%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .download .downloadRule .itemTitle::before {
+        left: .3rem;
+    }
+
+    .download .downloadRule .itemTitle::after {
+        right: .3rem;
+        -webkit-transform: rotate(180deg) translateY(50%);
+        transform: rotate(180deg) translateY(50%);
+    }
+
+    .download .downloadRule .ruleContent {
+        padding: .2rem;
+        background: #A2F1D4;
+        -webkit-border-radius: .15rem;
+        border-radius: .15rem;
+        box-sizing: border-box;
+    }
+
+    .download .downloadRule .itemText {
+        position: relative;
+        font-size: .2rem;
+        border-bottom: .02rem #88E8C9 solid;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        padding-bottom: .1rem;
+        margin-bottom: .1rem;
+    }
+
+    .download .downloadRule .itemText:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .download .munStart {
+        margin: 0 auto .1rem;
+        width: 5rem;
+        height: .32rem;
+        text-align: center;
+        font-size: .22rem;
+        line-height: .32rem;
+    }
+
+    .download .munStart span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .download .munLine {
+        display: inline-block;
+        margin: .01rem .13rem 0 .13rem;
+        width: .01rem;
+        height: .29rem;
+        background: rgba(255, 255, 255, .4);
+        vertical-align: middle;
+    }
+
+    .download .start {
+        display: inline-block;
+        width: .25rem;
+        height: .25rem;
+        background: url(/images/website/new2025/star.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+    }
+
+    .download .downloadRule .itemText span {
+        margin-right: .1rem;
+        flex-shrink: 0;
+        width: .34rem;
+        height: .33rem;
+        background-image: url(/images/website/new2025/ico_n.png);
+    }
+
+    .download .downloadRule .itemText .icoShield {
+        height: .38rem;
+        background-image: url(/images/website/new2025/ico_shield_02.png);
+    }
+
+    .download .downloadRule .itemText .icoWarm {
+        height: .28rem;
+        background-image: url(/images/website/new2025/ico_w.png);
+    }
+
+    .downloadRule .itemText_guid {
+        display: inline-block;
+        margin-left: .06rem;
+        color: #ffe899;
+        text-decoration: underline;
+        font-size: .2rem;
+    }
+
+    .download .btnDownloadIos {
+        display: block;
+        margin: 0 auto;
+        width: 2.7rem;
+        height: 1.02rem;
+        background: url(/images/website/new2025/button/ios_btn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .swiper-container {
+        margin-top: .03rem;
+        width: 6.63rem;
+        height: 3.77rem;
+        -webkit-border-radius: .16rem;
+        border-radius: .16rem;
+        overflow: hidden;
+    }
+
+
+    .swiper-slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        text-align: center;
+        font-size: 18px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-pagination {
+        bottom: -.35rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .swiper-pagination-bullet {
+        margin-right: .2rem;
+        width: .28rem;
+        height: .28rem;
+        background: url(/images/website/new2025/ico_list.png) no-repeat;
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-image: url(/images/website/new2025/ico_listOn.png);
+    }
+
+    .banner {
+        position: relative;
+        margin: .4rem auto 0;
+        padding: .1rem;
+        width: 7.02rem;
+        height: 4.17rem;
+        background-image: url("/images/website/new2025/bg_swiper.png");
+        box-sizing: border-box;
+        border: 1px solid transparent
+    }
+
+    .banner-ios{
+        margin: .4rem auto;
+    }
+
+    .news {
+        box-sizing: border-box;
+        margin: .7rem auto .2rem;
+        width: 6.98rem;
+        height: 3.91rem;
+        background-image: url("/images/website/new2025/bg_news.png");
+        border: 1px transparent solid;
+    }
+
+    .news .news-list {
+        margin: 0 auto;
+        width: 6.32rem;
+        background: rgba(29, 197, 152, .2);
+        -webki-border-radius: .16rem;
+        border-radius: .16rem;
+    }
+
+    .news li {
+        position: relative;
+        margin: 0 auto;
+        padding: .1rem 0 .05rem .4rem;
+        width: 95%;
+        height: .58rem;
+        border-bottom: .01rem #95EACC solid;
+        font-size: .24rem;
+        line-height: 1;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    .news li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: .3rem;
+        height: .24rem;
+        background: url("/images/website/new2025/ico_news.png") no-repeat;
+        background-size: 100% 100%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .news li .news-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 4.3rem;
+        display: inline-block;
+    }
+    .news li .news-title.newline{
+        white-space: normal;
+    }
+
+    .news li span {
+        float: right;
+    }
+
+    .news li:last-child {
+        border: 0;
+    }
+
+    .news li a {
+        display: -webkit-flex;
+        display: flex;
+        color: #008a73;
+        width: 100%;
+        height: 100%;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .footer, .footer-land {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .footer a, .footer-land a {
+        float: left;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .footer a.icoFaceBook, .footer-land a.icoFaceBook {
+        margin: 0 .22rem .24rem .4rem;
+        width: .62rem;
+        height: .62rem;
+        background-image: url(/images/website/ico_facebook.png);
+    }
+
+    .footer a.icoMail, .footer-land a.icoMail {
+        margin-right: .1rem;
+        width: .62rem;
+        height: .63rem;
+        background-image: url(/images/website/new2025/ico_mail.png);
+    }
+
+    .footer .icoAge, .footer-land .icoAge {
+        margin: 0 .1rem;
+        width: .58rem;
+        height: .58rem;
+        background: url(/images/website/new2025/ico_age_18+.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .footer a.icoIns, .footer-land a.icoIns {
+        margin-left: .2rem;
+        width: .63rem;
+        height: .63rem;
+        background-image: url(/images/website/ins.png);
+    }
+
+    .footer a.icoYoutube, .footer-land a.icoYoutube {
+        width: .63rem;
+        height: .63rem;
+        background-image: url(/images/website/youtube.png);
+    }
+
+    .footer a.icoTop, .footer-land a.icoTop {
+        float: right;
+        margin-right: .1rem;
+        width: .58rem;
+        height: .58rem;
+        background-image: url(/images/website/ico_top.png);
+    }
+
+    .footer .itemText, .footer-land .itemText {
+        clear: both;
+        color: #45b7bb;
+        text-align: center;
+    }
+
+    /*.wrapperInside {*/
+    /*    position: absolute;*/
+    /*    top: 0;*/
+    /*    left: 50%;*/
+    /*    margin-left: -3.6rem;*/
+    /*    width: 7.2rem;*/
+    /*    height: 100%;*/
+    /*    background: #0b5250;*/
+    /*    color: #c3f7ff;*/
+    /*    font-size: .2rem;*/
+    /*}*/
+
+    /*.wrapperInside .top {*/
+    /*    display: flex;*/
+    /*    display: -webkit-flex;*/
+    /*    height: .98rem;*/
+    /*    background: #EAFFEF;*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*}*/
+
+    /*.wrapperInside .top img {*/
+    /*    height: .37rem;*/
+    /*}*/
+
+    /*.wrapperInside .btnReturn {*/
+    /*    position: absolute;*/
+    /*    top: .3rem;*/
+    /*    left: .84rem;*/
+    /*    width: .46rem;*/
+    /*    height: .4rem;*/
+    /*    background: url(/images/website/btn_return.png) no-repeat;*/
+    /*    background-size: .46rem .4rem;*/
+    /*}*/
+
+    /*.wrapperInside .bannerTop img {*/
+    /*    height: 2.63rem;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews {*/
+    /*    padding: .35rem 0 1.25rem;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews .itemTitle {*/
+    /*    color: #45b7bb;*/
+    /*    text-align: center;*/
+    /*    font-size: .3rem;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews .date {*/
+    /*    margin: .1rem auto .3rem;*/
+    /*    width: 6.85rem;*/
+    /*    background: url(/images/website/line.png) no-repeat center center;*/
+    /*    background-size: 6.85rem .09rem;*/
+    /*    color: #23e1fd;*/
+    /*    text-align: center;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews .itemContent {*/
+    /*    padding: 0 .3rem 1rem;*/
+    /*    background: #0b5250 none repeat scroll 0 0;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews .itemContent p {*/
+    /*    line-height: 2.2;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews .ico01 {*/
+    /*    top: 1.48rem;*/
+    /*    right: 0;*/
+    /*    width: .57rem;*/
+    /*    height: 1.04rem;*/
+    /*    background: url(/images/website/ico_news_01.png) no-repeat;*/
+    /*    background-size: cover;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews .ico02 {*/
+    /*    bottom: 1.75rem;*/
+    /*    left: 0;*/
+    /*    width: .43rem;*/
+    /*    height: 1.1rem;*/
+    /*    background: url(/images/website/ico_news_02.png) no-repeat;*/
+    /*    background-size: cover;*/
+    /*}*/
+
+    /*.wrapperInside .itemNews .ico03 {*/
+    /*    right: .87rem;*/
+    /*    bottom: .52rem;*/
+    /*    width: 1.98rem;*/
+    /*    height: .74rem;*/
+    /*    background: url(/images/website/mobile/ico_news_03.png) no-repeat;*/
+    /*    background-size: cover;*/
+    /*}*/
+
+    /*.wrapperInside .footer {*/
+    /*    position: fixed;*/
+    /*    top: auto;*/
+    /*    bottom: 0;*/
+    /*    left: 50%;*/
+    /*    box-sizing: border-box;*/
+    /*    margin-left: -3.6rem;*/
+    /*    padding-top: .25rem;*/
+    /*    width: 7.2rem;*/
+    /*    height: 1.81rem;*/
+    /*    background: url(/images/website/bg_footer.jpg) no-repeat;*/
+    /*    background-size: 100% 100%;*/
+    /*}*/
+
+    .thickdiv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        display: none;
+        width: 100%;
+        height: 100%;
+        border: 0 none;
+        background: #000;
+        opacity: .7;
+    }
+
+    .exchangeBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 102;
+        display: none;
+        width: 6.2rem;
+        height: 3.46rem;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .exchangeBox::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border: .05rem rgba(136, 236, 199, .68) solid;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-border-radius: .25rem;
+        border-radius: .25rem;
+    }
+
+    .exchangeBox .text {
+        margin: .75rem auto .6rem;
+        padding: 0 .15rem;
+        color: #008a73;
+        text-align: center;
+        font-size: .3rem;
+        height: 1rem;
+    }
+
+    .exchangeBox .btnReceive,
+    .orderBox .btnReceive,
+    .exchangeBox .btnFollow {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 2.79rem;
+        height: .93rem;
+        background-image: url(/images/website/new2025/button/exchange_ok.png);
+        z-index: 2;
+    }
+
+    .exchangeBox .btnFollow {
+        background-image: url(/images/website/new2025/button/btn_follow.png);
+    }
+
+    .guide {
+        margin: 0 auto;
+        width: 7.2rem;
+        background: #0a5454;
+    }
+
+    .guide .title {
+        position: relative;
+        margin: 0 auto;
+        width: 7.2rem;
+        height: .99rem;
+        background: url(/images/website/bg_top_title.gif) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .guide .title img {
+        height: .99rem;
+    }
+
+    .guide .title .btnReturn {
+        position: absolute;
+        top: .36rem;
+        left: .84rem;
+        width: .46rem;
+        height: .4rem;
+        background: url(/images/website/btn_return.png) no-repeat;
+        background-size: .46rem .4rem;
+    }
+
+    .guide .guideCon {
+        margin: .4rem auto;
+    }
+
+    .guide .guideCon .itemText {
+        margin-bottom: .2rem;
+        margin-left: .17rem;
+        color: #45a7a2;
+        letter-spacing: -.01rem;
+        font-size: .32rem;
+    }
+
+    .guide .guideCon .itemText .ico {
+        float: left;
+        margin-top: -.05rem;
+        margin-right: .05rem;
+        width: .5rem;
+        height: .59rem;
+        background: url(/images/website/ico_step_bg.png) no-repeat;
+        background-size: 100% 100%;
+        color: #135450;
+        text-align: center;
+        font-style: italic;
+        font-size: .32rem;
+        line-height: .59rem;
+    }
+
+    .guide .guideCon .itemText .cl_yellow {
+        color: #ffe082;
+    }
+
+    .guide .guideCon .itemImg img {
+        width: 7.2rem;
+    }
+
+    .guide .footer {
+        box-sizing: border-box;
+        padding-top: .3rem;
+        height: 1.81rem;
+        background: url(/images/website/bg_footer.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .wrapper-land {
+        margin: 0 auto;
+        width: 7.2rem;
+        height: 13rem;
+        background: url(/images/website/webShop/ex_mall_land_bg.png) no-repeat;
+        background-size: 100% 100%;
+        color: #0a6ccb;
+        font-size: .2rem;
+    }
+
+    .wrapper-land .landContent {
+        position: relative;
+        margin: 0 auto;
+        width: 7.2rem;
+        height: 13rem;
+    }
+
+    .landContent .title {
+        position: relative;
+        margin: 0 auto;
+        width: 7.2rem;
+        height: .99rem;
+    }
+
+    .landContent .title img {
+        height: .99rem;
+    }
+
+    .landContent .title .btnReturn {
+        position: absolute;
+        top: .35rem;
+        left: .39rem;
+        width: .33rem;
+        height: .33rem;
+        background: url(/images/website/webShop/btn_return.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .landContent .landAfter {
+        height: auto;
+    }
+
+    .landAfter .userInFo {
+        position: relative;
+        margin: 0 auto;
+        height: .49rem;
+        background-color: #0a4c4c;
+        color: #12988e;
+        font-size: .24rem;
+        line-height: .49rem;
+        opacity: 50%;
+    }
+
+    .landAfter .userInFo .userId {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        padding-left: .22rem;
+        width: 4.09rem;
+        height: .49rem;
+    }
+
+    .landContent .yellow {
+        color: #e1d39b;
+    }
+
+    .landContent .bule {
+        color: #47d0d0;
+    }
+
+    .landAfter .userNum {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        width: 3.18rem;
+        height: .49rem;
+    }
+
+    .landAfter .userNum .goldIcon {
+        display: inline-block;
+        width: .32rem;
+        height: .41rem;
+        background: url(/images/website/webShop/gold_icon.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+    }
+
+    .landAfter .landDate {
+        padding-left: .22rem;
+        height: .77rem;
+        color: #12988e;
+        font-size: .28rem;
+        line-height: .77rem;
+    }
+
+    .landAfter .landDate .edit-icon {
+        display: inline-block;
+        margin-left: 1.28rem;
+        width: .28rem;
+        height: .33rem;
+        background: url(/images/website/webShop/edit_icon.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+    }
+
+    .landAfter .landDate .edit-btn {
+        color: #47d0d0;
+        text-decoration: underline;
+    }
+
+    .landAfter .list {
+        margin: 0 auto;
+        width: 6.78rem;
+        height: 7.05rem;
+    }
+
+    .list ul li {
+        position: relative;
+        margin-top: .12rem;
+        width: 100%;
+        height: 2.26rem;
+        background: url(/images/website/webShop/list_bg.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .list ul li:first-child {
+        margin-top: 0;
+    }
+
+    .list ul li .convertCard {
+        position: absolute;
+        top: .18rem;
+        left: .38rem;
+        width: 2.3rem;
+        height: 1.78rem;
+        background: url(/images/website/webShop/award_card.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .list ul li .convertLeft {
+        position: absolute;
+        position: relative;
+        top: .33rem;
+        left: 2.94rem;
+        width: 3.47rem;
+        height: 1.47rem;
+    }
+
+    .list .convertLeft .converTip {
+        position: absolute;
+        top: 0;
+        width: 3.47rem;
+        height: .37rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .list .convertLeft .converTip.tip01 {
+        background-image: url(/images/website/webShop/conver_tip_01.png);
+    }
+
+    .list .convertLeft .converTip.tip02 {
+        background-image: url(/images/website/webShop/conver_tip_02.png);
+    }
+
+    .list .convertLeft .converTip.tip03 {
+        background-image: url(/images/website/webShop/conver_tip_03.png);
+    }
+
+    .list .convertLeft .converBtn {
+        position: absolute;
+        bottom: 0;
+        left: .26rem;
+        display: inline-block;
+        width: 3.11rem;
+        height: .84rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .list .convertLeft .converBtn.btn01 {
+        background-image: url(/images/website/webShop/conver_btn_01.png);
+    }
+
+    .list .convertLeft .converBtn.btn02 {
+        background-image: url(/images/website/webShop/conver_btn_02.png);
+    }
+
+    .list .convertLeft .converBtn.btn03 {
+        background-image: url(/images/website/webShop/conver_btn_03.png);
+    }
+
+    .list ul li .convertGold {
+        position: absolute;
+        top: .24rem;
+        left: .38rem;
+        width: 2.26rem;
+        height: 2.02rem;
+        background: url(/images/website/webShop/conver_gold.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .landAfter .converRule {
+        margin: .13rem auto;
+        width: 6.7rem;
+    }
+
+    .converRule p {
+        position: relative;
+        overflow: hidden;
+        margin-top: .1rem;
+        padding-left: .15rem;
+        color: #12988e;
+        font-size: .24rem;
+        line-height: .3rem;
+        word-break: break-all;
+    }
+
+    .converRule .rule-dot {
+        position: absolute;
+        top: .15rem;
+        left: 0;
+        display: inline-block;
+        width: .08rem;
+        height: .08rem;
+        border-radius: 50%;
+        background-color: #12988e;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .landContent .footer {
+        position: absolute;
+        bottom: 0;
+        box-sizing: border-box;
+        padding-top: .3rem;
+        height: 1.81rem;
+        background: url(/images/website/bg_footer.jpg) no-repeat;
+        background-size: auto;
+        background-size: 100% 100%;
+    }
+
+    .landContent .landBefore {
+        height: auto;
+    }
+
+    .landBefore .landTip {
+        position: relative;
+        margin: 0 auto;
+        height: .83rem;
+        background-color: #0a4c4c;
+        color: #12988e;
+        font-size: .24rem;
+        line-height: .49rem;
+        opacity: 50%;
+    }
+
+    .landBefore .landTip p {
+        margin: 0 auto;
+        padding-top: .11rem;
+        padding-left: .21rem;
+        width: 6.8rem;
+        line-height: .3rem;
+    }
+
+    .landBefore .landTip .tipIcon {
+        display: inline-block;
+        width: .2rem;
+        height: .2rem;
+        background: url(/images/website/webShop/land_tip_icon.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+    }
+
+    .landBefore .landDate {
+        height: .7rem;
+    }
+
+    .landBefore .landDate {
+        padding-left: .22rem;
+        height: .7rem;
+        color: #12988e;
+        font-size: .28rem;
+        line-height: .7rem;
+    }
+
+    .landBefore .landDate .user-icon {
+        display: inline-block;
+        margin-left: 1.78rem;
+        width: .36rem;
+        height: .35rem;
+        background: url(/images/website/webShop/user_icon.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+    }
+
+    .landBefore .landDate .edit-btn {
+        color: #47d0d0;
+        text-decoration: underline;
+    }
+
+    .landBefore .list {
+        margin: 0 auto;
+        width: 6.78rem;
+        height: 7.05rem;
+    }
+
+    .landBefore .converRule {
+        margin: .1rem auto;
+        width: 6.7rem;
+    }
+
+    .recordList {
+        overflow: hidden;
+        margin: .17rem auto;
+        width: 6.77rem;
+        height: 9.88rem;
+    }
+
+    .recordList ul li {
+        position: relative;
+        margin-top: .12rem;
+        width: 100%;
+        height: 1.88rem;
+        background: url(/images/website/webShop/record_list_bg.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .recordList ul li:first-child {
+        margin-top: 0;
+    }
+
+    .recordList .recordDate {
+        position: absolute;
+        right: .26rem;
+        height: .34rem;
+        color: #12988e;
+        text-align: right;
+        font-size: .22rem;
+        line-height: .34rem;
+    }
+
+    .recordList .recordCard {
+        position: absolute;
+        top: .49rem;
+        left: .24rem;
+        width: 1.53rem;
+        height: 1.19rem;
+        background: url(/images/website/webShop/record_card.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .recordList .convertGold {
+        position: absolute;
+        top: .45rem;
+        left: .24rem;
+        width: 1.58rem;
+        height: 1.41rem;
+        background: url(/images/website/webShop/conver_gold.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .recordList .recordContent {
+        position: absolute;
+        top: .49rem;
+        left: 1.91rem;
+        width: 2.92rem;
+        height: 1.2rem;
+        color: #045852;
+        font-size: .24rem;
+    }
+
+    .recordList .recordContent .recordTips {
+        width: 2.92rem;
+        height: .33rem;
+        background: url(/images/website/webShop/record_tips_01.png) no-repeat;
+        background-size: 100% 100%;
+        color: #1bdada;
+        text-align: center;
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: .2rem;
+        line-height: .33rem;
+    }
+
+    .recordList .recordContent .recordTel {
+        padding: .01rem .15rem 0;
+    }
+
+    .recordList .recordContent .recordNum {
+        position: absolute;
+        bottom: 0;
+        padding: 0 .15rem 0;
+        color: #fddb80;
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: .3rem;
+    }
+
+    .recordContent .recordNum .recordNum-ioc {
+        display: inline-block;
+        margin-left: .05rem;
+        width: .35rem;
+        height: .41rem;
+        background: url(/images/website/webShop/recordNum_ioc.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+    }
+
+    .recordBtn {
+        position: absolute;
+        top: .49rem;
+        left: 5.01rem;
+        width: 1.54rem;
+        height: 1.2rem;
+        color: #dfb431;
+        font-size: .24rem;
+    }
+
+    .recordBtn p {
+        margin-left: .02rem;
+    }
+
+    .recordBtn .submitBtn {
+        position: absolute;
+        bottom: 0;
+        display: inline-block;
+        width: 1.56rem;
+        height: .56rem;
+        background: url(/images/website/webShop/record_btn_01.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .TelephoneTitle {
+        position: relative;
+        margin: 0 auto;
+        padding-left: .83rem;
+        height: .82rem;
+        background-color: #0a4c4c;
+        color: #12988e;
+        font-size: .24rem;
+        line-height: .82rem;
+    }
+
+    .TelephoneLogin {
+        margin: .52rem auto;
+        width: 4.25rem;
+        color: #26b7b2;
+        font-size: .26rem;
+    }
+
+    .TelephoneLogin label {
+        display: block;
+        margin-top: .2rem;
+        padding-left: .1rem;
+    }
+
+    .TelephoneLogin input {
+        padding-left: .2rem;
+        width: 4.05rem;
+        height: .46rem;
+        outline: 0;
+        border: none;
+        border-radius: .08rem;
+        background-color: #2ea5a5;
+        color: #177870;
+    }
+
+    .TelephoneLogin label:first-child {
+        margin-top: 0;
+    }
+
+    .TelephoneLogin .telephone_btn {
+        display: inline-block;
+        margin: .6rem .89rem 0;
+        width: 2.42rem;
+        height: .75rem;
+        background: url(/images/website/webShop/telephone_btn.png) no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+    }
+
+    .telephone-share {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 102;
+        display: none;
+        margin: -1.78rem 0 0 -3.4rem;
+        width: 6.78rem;
+        height: 5.02rem;
+    }
+
+    .telephone-share img {
+        width: 6.78rem;
+        height: 3.85rem;
+    }
+
+    .telephone-share .shareColseBtn {
+        position: absolute;
+        top: .1rem;
+        right: .1rem;
+        display: inline-block;
+        width: .2rem;
+        height: .2rem;
+        background: url(/images/website/webShop/share_colse.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .telephone-share .shareBtn {
+        display: block;
+        margin: .4rem auto;
+        width: 2.45rem;
+        height: .79rem;
+        background: url(/images/website/webShop/share_btn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .commonBg {
+        -webkit-background: linear-gradient(#E5FEED, #C3FCE3);
+        background: linear-gradient(#E5FEED, #C3FCE3);
+        border-top: .01rem #BDFBDF solid;
+        border-left: .02rem #6BF4C3 solid;
+        border-right: .02rem #6BF4C3 solid;
+        border-bottom: .05rem #6BF4C3 solid;
+        -webkit-border-radius: .25rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0 .05rem .05rem #239385;
+        box-shadow: 0 .05rem .05rem #239385;
+    }
+
+    .loginBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 102;
+        display: none;
+        margin: -1.78rem 0 0 -3.1rem;
+        width: 6.22rem;
+        height: 4.73rem;
+        background: url(/images/website/webShop/login_box.png) no-repeat;
+        background-size: cover;
+    }
+
+    .loginBox .btnClose {
+        top: 0;
+        right: 0;
+        width: .55rem;
+        height: .52rem;
+        background: url(/images/website/webShop/view_tutorial_btn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .loginBox .loginContent {
+        margin: 1.1rem auto 0;
+        margin-left: .4rem;
+        color: #26b7b2;
+        font-size: .26rem;
+    }
+
+    .loginBox .loginContent label {
+        display: inline-block;
+        margin-top: .2rem;
+        width: 1.81rem;
+        vertical-align: middle;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .loginBox .loginContent label:first-child {
+        margin-top: 0;
+    }
+
+    .loginBox .loginContent .inputLong {
+        padding-left: .1rem;
+        width: 2.64rem;
+        height: .51rem;
+        outline: 0;
+        border: none;
+        background: url(/images/website/webShop/login_input_bg.png) no-repeat;
+        background-size: 100% 100%;
+        color: #49d7b4;
+        line-height: .51rem;
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    .loginBox .loginContent input::-webkit-input-placeholder {
+        color: #177870;
+    }
+
+    .loginBox .loginContent input::-moz-placeholder {
+        color: #177870;
+    }
+
+    .loginBox .loginContent input:-ms-input-placeholder {
+        color: #177870;
+    }
+
+    input:-moz-placeholder, input::-moz-placeholder {
+        opacity: 1;
+    }
+
+    .loginBox .loginContent .viewTutorial {
+        display: inline-block;
+        width: .37rem;
+        height: .37rem;
+        background: url(/images/website/webShop/view_tutorial.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+    }
+
+    .loginBox .loginContent .inputShort {
+        display: inline-block;
+        padding-left: .1rem;
+        width: 2.13rem;
+        height: .51rem;
+        outline: 0;
+        border: none;
+        background: url(/images/website/webShop/input_short.png) no-repeat;
+        background-size: 100% 100%;
+        color: #49d7b4;
+        line-height: 1;
+    }
+
+    .loginBox .loginContent .viewReution {
+        display: inline-block;
+        color: #fe662a;
+        vertical-align: middle;
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+
+    .loginContent .submitBtn {
+        display: block;
+        margin: .28rem auto .1rem;
+        width: 2.44rem;
+        height: .8rem;
+        background: url(/images/website/webShop/submit_btn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .loginTip {
+        color: #26b7b2;
+        text-align: center;
+        white-space: nowrap;
+        font-size: .2rem;
+    }
+
+    .inputList {
+        margin-bottom: .13rem;
+        height: .53rem;
+    }
+
+    .viewGuideBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 102;
+        display: none;
+        margin: -3.78rem 0 0 -3.5rem;
+        width: 6.83rem;
+        height: 8.29rem;
+        background: url(/images/website/webShop/view_guide4.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .viewGuideBox .btnClose {
+        top: -.2rem;
+        right: -.2rem;
+        width: .55rem;
+        height: .55rem;
+        background: url(/images/website/webShop/view_tutorial_btn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .pupNote {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 102;
+        display: flex;
+        display: -webkit-flex;
+        margin: -1.79rem 0 0 -3.14rem;
+        width: 6.28rem;
+        height: 3.59rem;
+        border: .1rem solid #47d0d0;
+        background: -webkit-linear-gradient(bottom, #105d59, rgba(41, 146, 140, 1));
+        background: linear-gradient(bottom, #105d59, rgba(41, 146, 140, 1));
+        background: -moz-linear-gradient(bottom, #105d59, rgba(41, 146, 140, 1));
+        background: -o-linear-gradient(bottom, #105d59, rgba(41, 146, 140, 1));
+        background-size: 100% 100%;
+        align-items: center;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .pupNote .itemText {
+        width: 5.5rem;
+        color: #efcb80;
+        font-size: .26rem;
+    }
+
+    .pupNote .btnList a {
+        display: inline-block;
+        margin-top: .5rem;
+        width: 1.96rem;
+        height: .74rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .pupNote .btnList .btnCannel {
+        background-image: url(/images/shop/btn_cannel.png);
+    }
+
+    .pupNote .btnList .btnBinding {
+        margin-left: .5rem;
+        background-image: url(/images/shop/btn_binding.png);
+    }
+
+    .landContent .footer-land {
+        box-sizing: border-box;
+        padding-top: .3rem;
+        height: 1.81rem;
+        background: url(/images/website/bg_footer.jpg) no-repeat;
+        background-size: auto;
+        background-size: 100% 100%;
+    }
+
+    .gift-guidance {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 102;
+        margin: -3.7rem 0 0 -3.5rem;
+        width: 7rem;
+        height: 17.26rem;
+        background: url(/images/website/gift_guidance.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .gift-guidance .gift-colseBtn {
+        position: absolute;
+        top: -.15rem;
+        right: -.15rem;
+        display: inline-block;
+        width: .52rem;
+        height: .52rem;
+        background: url(/images/website/webInfull/cu_btn.png) no-repeat;
+        background-size: auto;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+
+    .guide-wrapper {
+        margin: 0 auto;
+        width: 7.2rem;
+        color: #89d1f7;
+        font-size: .16rem;
+    }
+
+    .guide-wrapper .regContent {
+        position: absolute;
+        top: 0;
+        margin: 0 auto;
+        width: 7.2rem;
+        height: 46.17rem;
+    }
+
+    .regContent .title {
+        margin: 0 auto;
+        width: 7.2rem;
+        height: .99rem;
+    }
+
+    .regContent .title img {
+        width: 7.2rem;
+        height: .99rem;
+    }
+
+    .regContent .title .btnReturn {
+        position: absolute;
+        top: .35rem;
+        left: .39rem;
+        width: .33rem;
+        height: .33rem;
+        background: url(/images/website/webShop/btn_return.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .guide-wrapper_text {
+        margin: .2rem auto 0;
+        width: 6.76rem;
+        color: #45a7a2;
+        text-align: left;
+        font-size: .26rem;
+        line-height: 1.2;
+    }
+
+    .guide-wrapper_title {
+        margin-top: .05rem;
+        color: #ffe082;
+        font-size: .28rem;
+    }
+
+    .guide-wrapper_img {
+        margin: .25rem auto 0;
+        width: 6.84rem;
+        height: 41.04rem;
+        background: url(/images/website/guide_wrapper_img.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .footer-guid {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.81rem;
+        background: url(/images/website/bg_footer.jpg) no-repeat;
+        background-size: auto;
+        background-size: 100% 100%;
+    }
+
+    .footer-guid a {
+        float: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .footer-guid a.icoFaceBook {
+        margin: .38rem .22rem .24rem .4rem;
+        width: .62rem;
+        height: .62rem;
+        background-image: url(/images/website/ico_facebook.png);
+    }
+
+    .footer-guid a.icoMail {
+        margin-top: .38rem;
+        width: .62rem;
+        height: .63rem;
+        background-image: url(/images/website/ico_mail.png);
+    }
+
+    .footer-guid a.icoIns {
+        margin-top: .38rem;
+        margin-left: .2rem;
+        width: .63rem;
+        height: .63rem;
+        background-image: url(/images/website/ins.png);
+    }
+
+    .footer-guid a.icoTop {
+        float: right;
+        margin-top: .38rem;
+        margin-right: .4rem;
+        width: .58rem;
+        height: .58rem;
+        background-image: url(/images/website/ico_top.png);
+    }
+
+    .footer-guid a.discordIns {
+        margin-top: .38rem;
+        margin-left: .2rem;
+        width: .63rem;
+        height: .63rem;
+        background-image: url(/images/website/ico_discord.png);
+    }
+
+    .footer-guid .itemText {
+        clear: both;
+        color: #45b7bb;
+        text-align: center;
+        font-size: .2rem;
+    }
+
+    .footer a.discordIns, .footer-land a.discordIns {
+        margin-left: .2rem;
+        width: .63rem;
+        height: .63rem;
+        background-image: url(/images/website/ico_discord.png);
+    }
+
+    .footer a.icoMail {
+        display: block;
+    }
+
+    .footer .ico-list {
+        display: flex;
+        display: -webkit-flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    .footer .mail-detail {
+        margin: .2rem auto 0;
+        clear: both;
+        display: flex;
+        display: -webkit-flex;
+        width: 92%;
+        -webkit-align-items: center;
+        -webkit-justify-content: space-between;;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer .mail-detail .text {
+        margin: 0 .25rem 0 .1rem;
+        color: #45b7bb;
+        font-size: .2rem;
+        word-wrap: normal;
+        word-break: break-word;
+    }
+
+    .footer .href-list {
+        display: flex;
+        display: -webkit-flex;
+        padding: .1rem 0;
+        background: #006A6F;
+        color: #00b5a9;
+        font-size: .18rem;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+
+    .footer .href-list a {
+        color: #00b5a9;
+        text-decoration: underline;
+    }
+
+    .footer-new {
+        height: auto !important;
+        background: #008080;
+        border-top: .02rem #1AA9B4 solid;
+    }
+
+    #wrapper-speeder .footer-new {
+        margin-top: 1rem;
+    }
+
+    .icon-jump {
+        top: 2rem;
+        right: .1rem;
+    }
+    .icon-jump-pc{
+        top: 3rem;
+        right: .1rem;
+        width: 1.07rem;
+    }
+    .icon-jump-pc img{ width: 100% }
+    .icon-jump-tt{
+        top: 3rem;
+        right: .25rem;
+        width: .8rem;
+    }
+    .icon-jump-tt img{ width: 100% }
+    .icon-jump .ico {
+        margin-right: .15rem;
+        text-align: right;
+    }
+
+    .icon-jump .ico img {
+        width: .8rem;
+    }
+
+    .icon-jump .text,
+    .icon-jump-pc .text,
+    .icon-jump-tt .text{
+        position: absolute;
+        top: 50%;
+        right: 1.2rem;
+        padding: .05rem .1rem;
+        width: 2rem;
+        background: #EAFFEF;
+        border-bottom: .03rem #6BF4C3 solid;
+        font-size: .2rem;
+        line-height: 1.2;
+        color: #008a73;
+        border-radius: .05rem;
+        animation: opacity 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 10s;
+        -webkit-transform: translateY(-60%);
+        transform: translateY(-60%);
+        word-break: break-word;
+    }
+    .icon-jump-tt .text{
+        right: 1rem;
+    }
+    .icon-jump .text:after,
+    .icon-jump-pc .text:after,
+    .icon-jump-tt .text::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -.08rem;
+        width: .08rem;
+        height: .22rem;
+        background: url(/images/website/new2025/arrow_03.png) no-repeat;
+        background-size: 100% 100%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    @keyframes opacity {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @font-face {
+        font-family: 'Barlow';
+        src: url("/images/common/fonts/BARLOW-BOLDCONDENSED.WOFF2.TTF") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+    .wrapper-global .btn-service {
+        top: 2rem;
+        right: .1rem;
+        width: .75rem;
+        height: .76rem;
+        background-image: url("/images/gw/global/ico_service.png");
+    }
+
+
+
+    .top-id {
+        top: 0;
+        left: 0;
+        padding: 0 .2rem;
+        width: 100%;
+        height: .95rem;
+        background: #EAFFEF;
+        border-bottom: .03rem #c5f3e3 solid;
+        font-family: 'NewEras';
+        font-size: .38rem;
+        color: #008069;
+        box-sizing: border-box;
+        z-index: 2;
+    }
+
+    .top-id .top-logo {
+        top: 50%;
+        left: .2rem;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .top-id .top-logo img {
+        height: .71rem;
+    }
+
+    .wrapper-global .top .language,
+    .top-id .language {
+        top: 50%;
+        right: .72rem;
+        height: .55rem;
+        background: #E5F3FF;
+        border: .01rem #26CFD2 solid;
+        color: #158587;
+        font-size: .4rem;
+        font-weight: bold;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .wrapper-global .top .language .text,
+    .top-id .language .text {
+        padding: 0 .2rem;
+    }
+
+    .wrapper-global .top .language .ico-arrow,
+    .top-id .language .ico-arrow {
+        width: .55rem;
+        height: 100%;
+        background: #158587 url("/images/gw/ico_lang_arrow.png") no-repeat center;
+        background-size: .19rem .17rem;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .wrapper-global .top .language.show .ico-arrow,
+    .top-id .language.show .ico-arrow {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    .wrapper-global .top .language .list,
+    .top-id .language .list {
+        display: none;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        background: #E5F3FF;
+        border: .01rem #26CFD2 solid;
+    }
+
+    .wrapper-global .top .language.show .list,
+    .top-id .language.show .list {
+        display: block;
+    }
+
+    .wrapper-global .top .language .list li,
+    .top-id .language .list li {
+        width: 100%;
+        height: .7rem;
+    }
+
+    .wrapper-global .top .language .list a,
+    .top-id .language .list li a {
+        display: block;
+        padding-left: .15rem;
+        color: #158587;
+        box-sizing: border-box;
+    }
+
+    .wrapper-global .top .language .list li.active,
+    .top-id .language .list li.active {
+        background: #b3e8ed;
+    }
+
+    .wrapper-global .top .age img,
+    .top-id .age img {
+        height: .57rem;
+    }
+
+    .wrapper-global .top .language {
+        right: .8rem;
+    }
+
+    .language .tips {
+        top: .7rem;
+        right: 0;
+        padding-top: .12rem;
+        width: 2.57rem;
+        height: .72rem;
+        background: url("/images/gw/bg_tips.png") no-repeat;
+        color: #effffe;
+        font-family: arial;
+        font-weight: normal;
+        font-size: .2rem;
+        line-height: .5rem;
+        text-align: center;
+        box-sizing: border-box;
+        pointer-events: none;
+        animation: opacityHide 1s linear forwards;
+        animation-delay: 10s;
+        background-size: 100% 100%;
+    }
+
+    .top-id .language .tips {
+        background-image: url("/images/gw/bg_tips_id.png")
+    }
+
+    @keyframes opacityHide {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .btn-enter-media {
+        margin: .2rem auto .6rem;
+        width: 5.72rem;
+        height: 1.26rem;
+        background: url("/images/website/new2025/button/btn_join_light.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .ico-enter-media {
+        margin: .4rem 0 0 .3rem;
+        width: .55rem
+    }
+
+    .enter-tips {
+        margin-top: .35rem;
+        font-size: .24rem;
+        color: #006761;
+        text-align: center;
+    }
+
+    .footer .ico-media-list {
+        display: flex;
+        display: -webkit-flex;
+        width: 100%;
+        gap: .3rem;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    .footer .ico-media-list .ico-enter-media {
+        margin-top: .2rem;
+    }
+
+    .footer .ico-media-list img {
+        margin-left: 0;
+        width: .55rem;
+    }
+
+    .pup-loading {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        width: 2rem;
+        height: 2rem;
+        background: none;
+        border: none;
+        z-index: 105
+    }
+
+    .spinner {
+        font-size: .28rem;
+        position: relative;
+        display: inline-block;
+        width: 1rem;
+        height: 1rem
+    }
+
+    .spinner.center {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto
+    }
+
+    .spinner .spinner-blade {
+        position: absolute;
+        left: 0.4rem;
+        bottom: 0;
+        width: 0.07rem;
+        height: 0.27rem;
+        border-radius: 0.05rem;
+        background-color: transparent;
+        -webkit-transform-origin: center -0.22rem;
+        -ms-transform-origin: center -0.22rem;
+        transform-origin: center -0.22rem;
+        animation: spinner-fade9234 1s infinite linear
+    }
+
+    .spinner .spinner-blade:nth-child(1) {
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    .spinner .spinner-blade:nth-child(2) {
+        -webkit-animation-delay: 0.083s;
+        animation-delay: 0.083s;
+        -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        transform: rotate(30deg)
+    }
+
+    .spinner .spinner-blade:nth-child(3) {
+        -webkit-animation-delay: 0.166s;
+        animation-delay: 0.166s;
+        -webkit-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg)
+    }
+
+    .spinner .spinner-blade:nth-child(4) {
+        -webkit-animation-delay: 0.249s;
+        animation-delay: 0.249s;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+
+    .spinner .spinner-blade:nth-child(5) {
+        -webkit-animation-delay: 0.332s;
+        animation-delay: 0.332s;
+        -webkit-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+        transform: rotate(120deg)
+    }
+
+    .spinner .spinner-blade:nth-child(6) {
+        -webkit-animation-delay: 0.415s;
+        animation-delay: 0.415s;
+        -webkit-transform: rotate(150deg);
+        -ms-transform: rotate(150deg);
+        transform: rotate(150deg)
+    }
+
+    .spinner .spinner-blade:nth-child(7) {
+        -webkit-animation-delay: 0.498s;
+        animation-delay: 0.498s;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+
+    .spinner .spinner-blade:nth-child(8) {
+        -webkit-animation-delay: 0.581s;
+        animation-delay: 0.581s;
+        -webkit-transform: rotate(210deg);
+        -ms-transform: rotate(210deg);
+        transform: rotate(210deg)
+    }
+
+    .spinner .spinner-blade:nth-child(9) {
+        -webkit-animation-delay: 0.664s;
+        animation-delay: 0.664s;
+        -webkit-transform: rotate(240deg);
+        -ms-transform: rotate(240deg);
+        transform: rotate(240deg)
+    }
+
+    .spinner .spinner-blade:nth-child(10) {
+        -webkit-animation-delay: 0.747s;
+        animation-delay: 0.747s;
+        -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg)
+    }
+
+    .spinner .spinner-blade:nth-child(11) {
+        -webkit-animation-delay: 0.83s;
+        animation-delay: 0.83s;
+        -webkit-transform: rotate(300deg);
+        -ms-transform: rotate(300deg);
+        transform: rotate(300deg)
+    }
+
+    .spinner .spinner-blade:nth-child(12) {
+        -webkit-animation-delay: 0.913s;
+        animation-delay: 0.913s;
+        -webkit-transform: rotate(330deg);
+        -ms-transform: rotate(330deg);
+        transform: rotate(330deg)
+    }
+
+    @keyframes spinner-fade9234 {
+        0% {
+            background-color: #E48B2B
+        }
+        100% {
+            background-color: transparent
+        }
+    }
+    .ico-national{
+        top: 2.9rem;
+        right: .1rem;
+        width: .98rem;
+        height: .82rem;
+        background-image: url("/images/national/ico_national.png")
+    }
+</style>    <script type="text/javascript">
+        (function (pw, ph) {
+            function setFontSize() {
+                var dw = pw;
+                var docEle = document.documentElement;
+                var cw = docEle.clientWidth || document.body.clientWidth;
+                var ch = docEle.clientHeight || document.body.clientHeight;
+                if (cw > ch) {
+                    var dh = ph || 720;
+                    var realw = Math.ceil(dh / ch * cw);
+                    dw = realw > dw ? realw : dw;
+                }
+                cw = cw > dw ? dw : cw;
+                var fz = cw / dw * 100;
+                docEle.style.fontSize = fz + 'px';
+                var realfz = ~~(+window.getComputedStyle(document.getElementsByTagName("html")[0]).fontSize.replace(
+                    'px', '') * 10000) / 10000;
+                if (fz !== realfz) {
+                    docEle.style.fontSize = fz * (fz / realfz) + 'px';
+                }
+            }
+
+            setFontSize();
+            window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', function () {
+                setTimeout(function () {
+                    setFontSize();
+                }, 300);
+            });
+        })(720);
+    </script>
+
+    <script type="text/javascript" src="/js/lite-tracker.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135292221-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135292221-1');
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-135292221-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+<section id="targetSection">
+    <div class="pr bg wrapper " id="wrapper-android" style="display:none">
+        <article>
+            <div class="pr df top-id">
+                <p class="pa top-logo"><img src="/images/website/new2025/ico_domino_v2.png"></p>
+                <p class="text">Higgs Games</p>
+            </div>
+                <div class="pa icon-jump">
+                    <p class="ico"><a href="javascript:iconJump()"><img src="/images/website/new2025/h5_icon_v3.png"></a></p>
+                    <p class="text">Klik untuk bermain tanpa download.</p>
+                </div>
+
+            <nav>
+                <div class="df nav nav-has-hgi">
+                    <a class="nav_btn nav_btn_recharge"
+                       href="/web/webInfull.do"></a>
+                    <a class="nav_btn nav_btn_giftcard"
+                       href="/giftcard/index.html"></a>
+                    <a class="nav_btn nav_btn_hgi"
+                       href="/hgiFeature/index.html"></a>
+                    <a class="nav_btn nav_btn_service" href="https://ikf.f2z7ly.com/web/index.do"></a>
+                </div>
+            </nav>
+            <div class="download">
+                <p class="df itemTopTitle"><img src="/images/website/new2025/ico_title_01.png"><span class="text">DOWNLOAD</span>
+                </p>
+                <div class="pr df downloadContent downloadContent-s">
+                    <div class="pr itemDetail btnTwo">
+                        <p class="btnDownload">
+                            <a class="bg" href="javascript:downloadGW()"></a>
+                            <span>Unduh: 101,080,000+</span>
+                        </p>
+                        <p class="pr btnDownloadS">
+                            <a class="bg" href="javascript:void(0);" onclick="downloadSafe();"></a>
+                            <span>Unduh: 103,630,000+</span>
+                            <i class="pa ico-shield"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="downloadRule">
+                    <p class="pr bg itemTitle">Keuntungan </p>
+                    <div class="ruleContent">
+                    <div class="df itemText"><span class="bg icoShield"></span>
+                        <p class="text">Versi S dapat lebih baik melindungi
+                            keamanan akun Anda dari perangkat lunak yang beresiko.</p></div>
+                    <div class="df itemText"><span class="bg ico" style="margin-top: 0px;"></span>
+                        <p class="text">Prioritas menikmati
+                            fitur dan cara main terbaru.</p></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article>
+                <a class="btn-enter-media" href="https://www.tiktok.com/@hgi_higgsgamesisland?_r=1&_t=ZS-96rw3DPE1if" target="_blank">
+                    <img class="ico-enter-media"
+                         src="/images/gw/global/ico_join_light_9.png">
+                    <p class="enter-tips">Dapatkan informasi menarik dan terkini</p>
+                </a>
+        </article>
+        <article>
+            <div class="bg banner banner-android">
+                <div class="android swiper-container">
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                        src="https://upimg.glekh.com/kf/2025/5/1935224480959959040.jpg">
+                            </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_01.jpg">
+                        </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_02.jpg">
+                        </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_03.jpg">
+                        </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_04.jpg"></div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_05.jpg"></div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_06.jpg"></div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_07.jpg"></div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_3p_08.jpg"></div>
+                    </div>
+                </div>
+
+                <div class="android swiper-pagination"></div>
+            </div>
+        </article>
+        <article>
+            <div class="bg news news-android">
+                <p class="df itemTopTitle"><img src="/images/website/new2025/ico_title_02.png"><span
+                            class="text">BERITA</span>
+                </p>
+                <ul class="news-list">
+                        <li>
+
+                            <a href="/websiteNews/news196.html"
+                               title='Saat Banyak Permainan Tradisional Mulai Dilupakan, Domino Tetap Hidup Lewat HGI City Cup 2026'>
+                                <p class="news-title">
+                                    Saat Banyak Permainan Tradisional Mulai Dilupakan, Domino Tetap Hidup Lewat HGI City Cup 2026
+                                </p>
+                                <span>31/05/2026</span>
+
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="/websiteNews/news191.html"
+                               title='Satu Bulan HGI City Cup 2026 di Surabaya, Rahman dan Wildan Jadi Juara Minggu Keempat'>
+                                <p class="news-title">
+                                    Satu Bulan HGI City Cup 2026 di Surabaya, Rahman dan Wildan Jadi Juara Minggu Keempat
+                                </p>
+                                <span>24/05/2026</span>
+
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="/websiteNews/news190.html"
+                               title='Turnamen Domino HGI City Cup 2026 di Surabaya Memanas, Persaingan Sengit Warnai Minggu Ketiga'>
+                                <p class="news-title">
+                                    Turnamen Domino HGI City Cup 2026 di Surabaya Memanas, Persaingan Sengit Warnai Minggu Ketiga
+                                </p>
+                                <span>17/05/2026</span>
+
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="/websiteNews/news181.html"
+                               title='Di Tengah Meningkatnya Risiko Aktivitas Digital pada Generasi Muda, HGI dan Polda Sumbar Dorong Literasi Digital Lewat Polda Seminar 2026'>
+                                <p class="news-title">
+                                    Di Tengah Meningkatnya Risiko Aktivitas Digital pada Generasi Muda, HGI dan Polda Sumbar Dorong Literasi Digital Lewat Polda Seminar 2026
+                                </p>
+                                <span>12/05/2026</span>
+
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="/websiteNews/news189.html"
+                               title='Pemain Wanita Pertama Ramaikan HGI City Cup 2026 di Minggu Kedua, Kompetisi Semakin Seru dan Kompetitif'>
+                                <p class="news-title">
+                                    Pemain Wanita Pertama Ramaikan HGI City Cup 2026 di Minggu Kedua, Kompetisi Semakin Seru dan Kompetitif
+                                </p>
+                                <span>10/05/2026</span>
+
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </article>
+
+<div class="footer footer-new">
+                <div class="ico-media-list">
+                    <a href="https://www.facebook.com/higgsgamesislandofficial" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_1.png"></a>
+                    <a href="https://x.com/HiggsGames" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_5.png"></a>
+                    <a href="https://discord.gg/XPXMKh29jP" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_4.png"></a>
+                    <a href="https://t.me/HGI_official" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_6.png"></a>
+                    <a href="https://whatsapp.com/channel/0029VbB9AKf6RGJ9U8qdl23I" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_7.png"></a>
+                </div>
+    <div class="pr mail-detail">
+        <div class="con-left">
+        <a class="icoMail" href="mailto:higgsofficial@higgsgames.com"></a>
+        <p class="text">Contact us: higgsofficial@higgsgames.com <br>Working hour: 08:00 - 20:00 WIB</p>
+        </div>
+        <div class="df con-right">
+      <p class="icoAge"></p>
+        <a class="icoTop" href="javascript:void(0)" onclick="scrollToTop()"></a>
+        </div>
+    </div>
+    <div class="href-list">
+        <a href="https://privacy.higgsgames.com/idterms.html">Perjanjian Pengguna</a>
+        <a href="https://privacy.higgsgames.com/idprivacy.html">Kebijakan Privasi</a>
+        <span>Copyright©2023</span>
+    </div>
+</div>    </div>
+    <div class="pr bg wrapper" id="wrapper-ios" style="display: none;">
+        <article>
+            <div class="pr df top-id">
+                <p class="pa top-logo"><img src="/images/website/new2025/ico_domino_v2.png"></p>
+                <p class="text">Higgs Games</p>
+            </div>
+                <div class="pa icon-jump">
+                    <p class="ico"><a href="javascript:iconJump()"><img src="/images/website/new2025/h5_icon_v3.png"></a></p>
+                    <p class="text">Klik untuk bermain tanpa download.</p>
+                </div>
+
+            <nav>
+                <div class="df nav">
+                    <a class="nav_btn nav_btn_service" href="https://ikf.f2z7ly.com/web/index.do"></a>
+                </div>
+            </nav>
+            <div class="download iosTop">
+                <p class="df itemTopTitle"><img src="/images/website/new2025/ico_title_01.png"><span class="text">DOWNLOAD</span>
+                </p>
+                <div class="pr df downloadContent downloadContent-s">
+                    <a href="javascript:downloadIos()" class="btnDownloadIos"></a>
+                    <div class="df munStart">
+                        <div class="con-left">
+                            <span>Downloads: 760,000+</span>
+                        </div>
+                        <i class="munLine"></i>
+                        <div class="con-right">
+                            <span>5.0</span>
+                            <i class="start"></i>
+                            <i class="start"></i>
+                            <i class="start"></i>
+                            <i class="start"></i>
+                            <i class="start"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article>
+                <a class="btn-enter-media" href="https://www.tiktok.com/@hgi_higgsgamesisland?_r=1&_t=ZS-96rw3DPE1if" target="_blank">
+                    <img class="ico-enter-media"
+                         src="/images/gw/global/ico_join_light_9.png">
+                    <p class="enter-tips">Dapatkan informasi menarik dan terkini</p>
+                </a>
+        </article>
+
+        <article>
+            <div class="bg banner banner-ios">
+                <div class="ios swiper-container">
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                        src="https://upimg.glekh.com/kf/2025/5/1935224480959959040.jpg">
+                            </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_ios_01.jpg">
+                        </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_ios_02.jpg">
+                        </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_ios_03.jpg">
+                        </div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_ios_04.jpg"></div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_ios_05.jpg"></div>
+                        <div class="swiper-slide"><img
+                                    src="/images/website/new2025/feature/img_swiper_ios_06.jpg"></div>
+                    </div>
+                </div>
+
+                <div class="ios swiper-pagination"></div>
+            </div>
+        </article>
+
+
+<div class="footer footer-new">
+                <div class="ico-media-list">
+                    <a href="https://www.facebook.com/higgsgamesislandofficial" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_1.png"></a>
+                    <a href="https://x.com/HiggsGames" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_5.png"></a>
+                    <a href="https://discord.gg/XPXMKh29jP" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_4.png"></a>
+                    <a href="https://t.me/HGI_official" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_6.png"></a>
+                    <a href="https://whatsapp.com/channel/0029VbB9AKf6RGJ9U8qdl23I" target="_blank"><img class="ico-enter-media" src="/images/gw/global/ico_join_light_7.png"></a>
+                </div>
+    <div class="pr mail-detail">
+        <div class="con-left">
+        <a class="icoMail" href="mailto:higgsofficial@higgsgames.com"></a>
+        <p class="text">Contact us: higgsofficial@higgsgames.com <br>Working hour: 08:00 - 20:00 WIB</p>
+        </div>
+        <div class="df con-right">
+      <p class="icoAge"></p>
+        <a class="icoTop" href="javascript:void(0)" onclick="scrollToTop()"></a>
+        </div>
+    </div>
+    <div class="href-list">
+        <a href="https://privacy.higgsgames.com/idterms.html">Perjanjian Pengguna</a>
+        <a href="https://privacy.higgsgames.com/idprivacy.html">Kebijakan Privasi</a>
+        <span>Copyright©2023</span>
+    </div>
+</div>    </div>
+
+
+</section>
+<script type="text/javascript" src="/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="/js/request.param.js"></script>
+<script type="text/javascript" src="/js/webkit2.0.js"></script>
+<script type="text/javascript" src="/js/oo/oo.pup-1.0.js"></script>
+
+<script type="text/javascript">
+    var ApkUi = function () {
+        this.yesfunction = null;
+        this.nofunction = null;
+    }
+
+    ApkUi.prototype.findBody = function () {
+        return document.getElementsByTagName("body")[0];
+    }
+
+    ApkUi.prototype.hideDiv = function () {
+        let div = document.getElementById("tipDiv");
+        if (div) {
+            this.findBody().removeChild(div);
+        }
+        let thickDiv = document.getElementById("uiThickDiv");
+        if (thickDiv) {
+            this.findBody().removeChild(thickDiv);
+        }
+    }
+    ApkUi.prototype.hideConfirm = function () {
+        let confirm = document.getElementById("confirmDiv");
+        if (confirm) {
+            this.findBody().removeChild(confirm);
+        }
+        let thickDiv = document.getElementById("uiThickDiv");
+        if (thickDiv) {
+            this.findBody().removeChild(thickDiv);
+        }
+    }
+
+
+
+    ApkUi.prototype.findDiv = function () {
+        if (document.getElementById('tipDiv')) {
+            return document.getElementById('tipDiv');
+        } else {
+            let div = document.createElement('div');
+            div.setAttribute('id', 'tipDiv');
+            div.setAttribute('style', 'position: fixed; top: 50%; left: 50%; margin: -1.44rem 0 0 -2.6rem; width: 5.2rem; height: 2.98rem; background: url(/images/shop/bg_tips.png) no-repeat; background-size: 100% 100%;z-index: 102;');
+            return div;
+        }
+    }
+
+
+    ApkUi.prototype.findThickDiv = function () {
+        if (document.getElementById('uiThickDiv')) {
+            return document.getElementById('uiThickDiv');
+        } else {
+            let div = document.createElement('div');
+            div.setAttribute('id', 'uiThickDiv');
+            div.setAttribute('style', ' position: fixed; top: 0; left: 0; width: 100%;  height: 100%; background:#000000; border: 0 none; opacity: 0.5; filter:alpha(opacity=50); z-index:101;');
+            return div;
+        }
+    }
+
+    ApkUi.prototype.showMsg = function (msg) {
+        let div = this.findDiv();
+        div.innerHTML = '<p style="align-items: center;color: #efcb80;font-size: 0.3rem;height: 1.2rem;justify-content: center;justify-self: center;margin: 0.2rem 0.2rem 0.3rem;text-align: center;display: flex;word-break: break-word;">' + msg + '</p>' +
+        '<a style="display: block; margin: 0 auto; width: 2.28rem; height: .79rem; background: url(/images/shop/btn_binding_tips.png) no-repeat; background-size: 100% 100%;" onclick="apkUi.hideDiv()"></a>'
+        let thickDiv = this.findThickDiv();
+        this.findBody().append(thickDiv);
+        this.findBody().append(div);
+    }
+
+
+    ApkUi.prototype.findConfirm = function () {
+        if (document.getElementById('confirmDiv')) {
+            return document.getElementById('confirmDiv');
+        } else {
+            let div = document.createElement('div');
+            div.setAttribute('id', 'confirmDiv');
+            div.setAttribute('style', 'position: fixed; top: 50%; left: 50%; margin: -1.79rem 0 0 -3.14rem; display: flex; display: -webkit-flex; width: 6.28rem; height: 3.59rem;background: url(/images/shop/bg_note.png) no-repeat; align-items: center; flex-flow: column; justify-content: center; background-size: 100% 100%; z-index: 102;')
+            return div;
+        }
+    }
+
+    ApkUi.prototype.byes = function() {
+        this.call(this.yesfunction)
+    }
+    ApkUi.prototype.bno = function() {
+        this.call(this.nofunction)
+    }
+    ApkUi.prototype.call = function(fun) {
+        if (fun) {
+            fun();
+        }
+        this.hideConfirm();
+        this.yesfunction = null;
+        this.nofunction = null;
+    }
+
+
+    ApkUi.prototype.showConfirm = function (msg, yfun, nfun) {
+        let div =this.findConfirm();
+        this.nofunction = nfun;
+        this.yesfunction = yfun;
+        div.innerHTML = '<p style="width: 5.5rem; font-size: .26rem; color: #efcb80;margin: 0;text-align: center;word-wrap:break-word;">' + msg + '</p>' +
+        '<p style="margin: 0"><a style="display: inline-block; margin-top: .5rem; width: 1.96rem; height: .74rem; background-repeat: no-repeat; background-size: cover;background-image: url(/images/shop/btn_cannel.png);"  onclick="apkUi.bno()"></a>' +
+            '<a style="display: inline-block; margin-top: .5rem; width: 1.96rem; height: .74rem; background-repeat: no-repeat; background-size: cover;margin-left: .5rem; background-image: url(/images/shop/btn_binding.png);"  onclick="apkUi.byes()"></a></p>'
+        let thickDiv = this.findThickDiv();
+        this.findBody().append(thickDiv);
+        this.findBody().append(div);
+    }
+    var apkUi = new ApkUi();
+
+</script><script type="text/javascript" src="/js/swiper-4.2.2.min.js"></script>
+<script type="text/javascript" src="/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/iscroll5.0.js"></script>
+<script type="text/javascript">
+    (function () {
+        if (Webkit.isIos() || Webkit.isPad()) {
+            $("#wrapper-ios").show();
+            $("#wrapper-android").hide();
+        } else {
+            $("#wrapper-android").show();
+            $("#wrapper-ios").hide();
+        }
+        if (!Webkit.isMobile()){
+            $("#jumpPC").show();
+            $("#jumpTT").css("top","4.25rem")
+        }
+        $(".ico-list").css("margin-top", "0.2rem");
+    })();
+
+    $(".nav .nav_btn").removeClass("active");
+    var clipboard = new Clipboard('#myExchangeCode');
+    clipboard.on('success', function (e) {
+        alert("Salinan yang berhasil");
+    });
+    clipboard.on('error', function () {
+    });
+
+    var swiper = new Swiper('.android.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.android.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    });
+
+    var swiper = new Swiper('.ios.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.ios.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    });
+
+    function showCodeDiv() {
+        $("#codeDiv").show();
+        $("#thickdiv").show();
+    };
+
+    function hideCodeDiv() {
+        $("#codeDiv").hide();
+        $("#thickdiv").hide();
+    };
+
+    function gotoFaceBookPage() {
+        window.open("https://www.facebook.com/DominoIsland/");
+    }
+
+    function downloadGoo() {
+        ga('send', 'event', 'click', 'google', 'download');
+        window.open("https://play.google.com/store/apps/details?id=com.neptune.domino");
+    };
+
+    function downloadGW() {
+        ga('send', 'event', 'click', 'GW', 'download');
+
+        if (!isInApp()) {
+
+            var clickedAt = Date.now();
+            OOPup.showLoading();
+            var appUri = "dmnopen://com.higgs.domino";
+
+            window.location.href = appUri;
+
+            setTimeout(function () {
+                OOPup.hideLoading();
+                if ((Date.now() - clickedAt) < 3200) {
+                    window.location.href = "https://downloadcfcdn.iolsu.com/download/Domino_V2781.apk";
+                }
+            }, 3000);
+        }else{
+            window.location.href = "https://downloadcfcdn.iolsu.com/download/Domino_V2781.apk";
+        }
+    };
+
+    function iconJump() {
+        window.location.href = "https://web.topbos.com/";
+    };
+
+    function iconJumpPC() {
+        window.location.href = "https://download.iolsu.com/download/Domino_Vpc2580.exe";
+    };
+
+
+
+    function downloadIos() {
+        ga('send', 'event', 'click', 'IOS', 'download');
+        window.location.href = "https://itunes.apple.com/cn/app/id1456356688";
+    }
+
+    function downloadSpeed() {
+        if (!isInApp()) {
+            var clickedAt = Date.now();
+            OOPup.showLoading();
+            var appUri = "dmnopen://com.higgs.dominops";
+
+            window.location.href = appUri;
+
+            setTimeout(function () {
+                OOPup.hideLoading();
+                if ((Date.now() - clickedAt) < 3200) {
+                    window.location.href = "https://downloadcfcdn.iolsu.com/download/Domino_V2781.apk";
+                }
+            }, 3000);
+        }else{
+            window.location.href = "https://downloadcfcdn.iolsu.com/download/Domino_V2781.apk";
+        }
+    }
+
+    function downloadSafe() {
+
+        if (!isInApp()) {
+            var clickedAt = Date.now();
+            OOPup.showLoading();
+            var appUri = "dmnopen://com.higgs.dominos";
+
+            window.location.href = appUri;
+
+            setTimeout(function () {
+                OOPup.hideLoading();
+                if ((Date.now() - clickedAt) < 3200) {
+                    window.location.href = "https://downloadcfcdn.iolsu.com/download/Domino_Vg2781.apk";
+                }
+            }, 3000);
+        }else{
+            window.location.href = "https://downloadcfcdn.iolsu.com/download/Domino_Vg2781.apk";
+        }
+    }
+
+    function isInApp() {
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf("myappwebview") > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    $(".nav_btn").click(function () {
+        $(this).siblings('a').removeClass('active');
+        $(this).addClass('active');
+    })
+
+
+    function showGuideDiv() {
+        $("#thickdiv2").show();
+        $("#giftGuide").show();
+    }
+
+    function hideGuideDiv() {
+        $("#thickdiv2").hide();
+        $("#giftGuide").hide();
+    }
+
+
+    function scrollToTop() {
+        $('html, body').animate({scrollTop: 0}, 'slow');
+    }
+</script><script>
+    function showIdPkg() {
+        document.title = 'Online Game';
+        document.body.style.background = '#043e3a';
+    }
+
+    $(".language").click(function () {
+        $(this).toggleClass("show");
+        $("#languageTips").hide();
+    })
+
+    function showEn() {
+        location.href = location.pathname.replace("/id", "/en");
+    }
+</script>
+<script type="text/javascript">
+    (function () {
+        function bindwebsite2pLiteTracker() {
+            if (!window.liteTracker) {
+                return;
+            }
+            liteTracker.init({
+                appId: '1010',
+                pageVersion: '1.0.0',
+                autoTrack: false,
+                autoTrackClick: false,
+                autoTrackDeclarative: false,
+                batchReport: true,
+                debug: false
+            });
+            if (!liteTracker.initialized) {
+                return;
+            }
+            liteTracker.trackPageView({
+                eventCode: 'website_2p'
+            });
+
+            function lt(code, extra) {
+                if (extra && typeof extra === 'object') {
+                    liteTracker.trackEvent(code, { extra: extra });
+                } else {
+                    liteTracker.trackEvent(code, {});
+                }
+            }
+
+            $(document).on('click', '#wrapper-android .icon-jump .ico a', function () {
+                lt('website2p_banner_icon_jump_h5', { platform: 'android', slot: 'top_right',elementId:'website2p_banner_icon_jump_h5'});
+            });
+            $(document).on('click', '#wrapper-ios .icon-jump .ico a', function () {
+                lt('website2p_banner_icon_jump_h5', { platform: 'ios', slot: 'top_right',elementId:'website2p_banner_icon_jump_h5' });
+            });
+            $(document).on('click', '#wrapper-android .btnDownloadGoogle a', function () {
+                lt('website2p_download_google_play', { platform: 'android',elementId:'website2p_download_google_play' });
+            });
+            $(document).on('click', '#wrapper-android p.btnDownload a', function () {
+                lt('website2p_download_domino_gw', { platform: 'android',elementId:'website2p_download_domino_gw' });
+            });
+            $(document).on('click', '#wrapper-android p.btnDownloadS a', function () {
+                lt('website2p_download_domino_s', { platform: 'android' ,elementId:'website2p_download_domino_s'});
+            });
+            $(document).on('click', '#wrapper-ios .btnDownloadIos', function () {
+                lt('website2p_download_ios', { platform: 'ios',elementId:'website2p_download_ios' });
+            });
+            $(document).on('click', '.btn-enter-media', function () {
+                lt('website2p_enter_media', { href: this.href,elementId:'website2p_enter_media', });
+            });
+            $(document).on('click', '#wrapper-android .news-list a', function () {
+                var $a = $(this);
+                lt('website2p_news_item', {
+                    href: this.href,
+                    title: $.trim($a.find('.news-title').text())
+                });
+            });
+
+
+
+            function bindSwiperReport(containerSelector, platform) {
+                var el = document.querySelector(containerSelector);
+                if (!el || !el.swiper) return;
+
+                var swiperInstance = el.swiper;
+
+
+                swiperInstance.on('slideChange', function () {
+
+                    var isManual = this.isTouched || (this.touches && this.touches.diff !== 0);
+
+                    if (isManual) {
+                        lt('website2p_banner_swiper', {
+                            platform: platform,
+                            imgUrl: this.slides[this.realIndex].querySelector('img').src,
+                            slideIndex: this.realIndex
+                        });
+
+                        if (this.touches) {
+                            this.touches.diff = 0;
+                        }
+                    }
+                });
+            }
+
+
+            bindSwiperReport('#wrapper-android .android.swiper-container', 'android');
+            bindSwiperReport('#wrapper-ios .ios.swiper-container', 'ios');
+        }
+
+        if (window.jQuery) {
+            $(bindwebsite2pLiteTracker);
+        } else {
+            document.addEventListener('DOMContentLoaded', bindwebsite2pLiteTracker);
+        }
+    })();
+</script>
+</body>
+</html>

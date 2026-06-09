@@ -1,0 +1,18 @@
+
+.footer,.footer-land{bottom:.2rem;left:0;width:100%;}
+.footer a,.footer-land a{float:left;background-size:cover;background-repeat:no-repeat;}
+.footer a.icoFaceBook,.footer-land a.icoFaceBook{margin:0 .22rem .24rem .4rem;width:.62rem;height:.62rem;}
+.footer a.icoMail,.footer-land a.icoMail{width:.62rem;height:.63rem;}
+.footer a.icoIns,.footer-land a.icoIns{margin-left:.2rem;width:.63rem;height:.63rem;}
+.footer a.discordIns,.footer-land a.discordIns{margin-left:.2rem;width:.63rem;height:.63rem;}
+.footer a.icoTop,.footer-land a.icoTop{float:right;margin-right:.4rem;width:.58rem;height:.58rem;}
+.footer .itemText,.footer-land .itemText{clear:both;color:#45b7bb;text-align:center;}
+
+.landContent .footer{position:static;box-sizing:border-box;padding-top:.3rem;height:1.81rem;background-size:auto;background-size:100% 100%}
+
+.footer a.icoMail{ display: block;}
+.footer .ico-list{ display: flex; display: -webkit-flex; -webkit-justify-content: center; justify-content: center;}
+.footer .mail-detail{ clear: both; display: flex; display: -webkit-flex; -webkit-align-items: center; -webkit-justify-content: center; align-items: center; justify-content: center;}
+.footer .mail-detail .text{ margin: 0 .25rem 0 .1rem; width: 4.95rem; color: #45b7bb; font-size: .2rem;}
+.footer .href-list{ display: flex; display: -webkit-flex; margin-top: .1rem; color: #00b5a9; font-size: .18rem; -webkit-justify-content: space-around; justify-content:space-around;}
+.footer .href-list a{  color: #00b5a9; text-decoration: underline;}

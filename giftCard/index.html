@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta property="al:android:url" content=""/>
+    <meta property="al:android:app_name" content="Domino Island"/>
+    <meta property="al:android:package" content=""/>
+    <meta property="al:web:should_fallback" content="false"/>
+    <title>Online Game</title>
+    <meta name="keywords" content="HGI,HDI, HDG, HD, Leon, Dona">
+    <meta name="description" content=" It is a game collection.">
+    <link type="text/css" href="../css/giftCard/index-0.0.5.css" rel="stylesheet">
+    <script type="text/javascript">
+        (function (pw, ph) {
+            function setFontSize() {
+                var dw = pw;
+                var docEle = document.documentElement;
+                var cw = docEle.clientWidth || document.body.clientWidth;
+                var ch = docEle.clientHeight || document.body.clientHeight;
+                if (cw > ch) {
+                    var dh = ph || 720;
+                    var realw = Math.ceil(dh / ch * cw);
+                    dw = realw > dw ? realw : dw;
+                }
+                cw = cw > dw ? dw : cw;
+                var fz = cw / dw * 100;
+                docEle.style.fontSize = fz + 'px';
+                var realfz = ~~(+window.getComputedStyle(document.getElementsByTagName("html")[0]).fontSize.replace(
+                    'px', '') * 10000) / 10000;
+                if (fz !== realfz) {
+                    docEle.style.fontSize = fz * (fz / realfz) + 'px';
+                }
+            }
+
+            setFontSize();
+            window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', function () {
+                setTimeout(function () {
+                    setFontSize();
+                }, 300);
+            });
+        })(720);
+    </script>
+</head>
+
+<body>
+<section id="targetSection">
+    <div class="pr bg wrapper">
+        <div class="regContent">
+            <div class="pr df top">
+                <a class="pa bg btnReturn" onclick="goBack()"></a>
+                <p class="text">Higgs Games</p>
+                <!--                <a id="topDownLoadUrl" class="pa bg btnDownloadTop" style="display: none" href=""></a>-->
+                <input type="hidden" id="topDownLoadUrl" value="">
+                <a id="topDownLoadDiv" class="pa bg btnDownloadTop" style="display: none" onclick="topGwDownLoad()"></a>
+            </div>
+            <div style="display: none" id="extraNav">
+                <nav>
+                    <div class="df nav nav-has-hgi">
+                        <a class="nav_btn nav_btn_recharge"
+                           href="/web/webInfull.do"></a>
+                        <a class="nav_btn nav_btn_giftcard active"
+                           href="/giftcard/index.html"></a>
+                        <a class="nav_btn nav_btn_hgi"
+                           href="/hgiFeature/index.html"></a>
+                        <a class="nav_btn nav_btn_service" id="kefuUrl" href=""></a>
+                    </div>
+                </nav>
+            </div>
+            <div id="giftcardNav">
+                <nav>
+                    <div class="df nav">
+                        <p class="nav_btn nav_btn_giftcard active"></p>
+                    </div>
+                </nav>
+            </div>
+            <div class="bg commonBg giftCard">
+                <p class="df itemTopTitle"><img src="../images/website/new2025/ico_title_03.png"><span
+                        class="text">GIFT CARD</span>
+                </p>
+                <div class="pr content">
+                    <div class="df info">
+                        <div class="con-left">
+                            PIN
+                        </div>
+                        <div class="con-right">
+                            <input id="giftCardPin" type="text" onkeyup="value=value.replace(/[^a-zA-Z0-9]/g,'')"
+                                   maxlength="32">
+                        </div>
+                    </div>
+                    <div class="pr df info">
+                        <div class="con-left">
+                            ID Game
+                        </div>
+                        <div class="con-right">
+                            <input id="giftCardUserId" type="text" onkeyup="value=value.replace(/[^(\d)]/g, '')"
+                                   maxlength="10">
+                        </div>
+                        <button class="pa bg ico-guide" onclick="showGuideViewDiv()"></button>
+                    </div>
+                    <div class="pr df info">
+                        <div class="con-left">
+                            Kode Verifikasi
+                        </div>
+                        <div class="con-right">
+                            <input id="validateCode" type="text" onkeyup="value=value.replace(/[^(\d)]/g, '')"
+                                   maxlength="10">
+                        </div>
+                        <button id="codeButton" class="pa btn-countdown " onclick="sendValidateCode(true,false)">Kirim
+                        </button>
+                    </div>
+                </div>
+                <ul class="bot-tips">
+                    <li>Klik avatar Anda di pojok kiri atas Lobi game. ID game berada di bawah avatar Anda.</li>
+                    <li>Kode verifikasi akan dikirimkan ke Inbox di game. Kode verifikasi akan expired dalam 30 menit.
+                    </li>
+                    <li>Hadiah akan dikirimkan ke Inbox Anda. Buka game untuk klaim.</li>
+                </ul>
+                <button class="bg btn-exchange" onclick="sureExchange()"></button>
+            </div>
+            <footer>
+                <div class="footer">
+                    <div class="ico-media-list" id="gwSmsList">
+                    </div>
+
+                    <div class="pr mail-detail">
+                        <div class="con-left">
+                            <a class="icoMail" href="mailto:higgsofficial@higgsgames.com"></a>
+                            <p class="text">Contact us: higgsofficial@higgsgames.com <br>Working hour: 08:00 - 20:00 WIB
+                            </p>
+                        </div>
+                        <div class="df con-right">
+                            <p class="icoAge"></p>
+                            <a class="icoTop" href="javascript:void(0)" onclick="scrollToTop()"></a>
+                        </div>
+                    </div>
+                    <div class="href-list">
+                        <a href="https://privacy.a1vd6w.com/enterms.html">Terms of Service</a>
+                        <a href="https://privacy.a1vd6w.com/enprivacy.html">Privacy Policy</a>
+                        <span>Copyright©2023</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="thickdiv" class="thickdiv" style="display: none;"></div>
+
+        <div id="tipDiv" class="commonBg exchangeBox" style="z-index: 999; display: none;">
+            <a class="pa bg colseBtn" id="exchangeClose" href="javascript:hideTipDiv()"></a>
+            <p class="text" id="tipMsg"></p>
+            <a class="bg btnReceive" href="javascript:hideTipDiv()"></a>
+        </div>
+
+        <div id="tipAndFocusDiv" class="commonBg exchangeBox" style="z-index: 999; display: none;">
+            <input id="focusElementId" type="hidden"></input>
+            <a class="pa bg colseBtn" href="javascript:hideTipAndFocusDiv()"></a>
+            <p class="text" id="tipFocusMsg"></p>
+            <a class="bg btnReceive" href="javascript:hideTipAndFocusDiv()"></a>
+        </div>
+
+
+        <div class="pa bg pup viewGuideBox" style="display: none" id="viewDiv">
+            <a class="pa bg colseBtn" id="viewguideClose" onclick="hideGuideViewDiv()"></a>
+        </div>
+
+    </div>
+</section>
+</body>
+<script type="text/javascript" src="/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="/js/request.param.js"></script>
+<script type="text/javascript" src="/js/webkit2.0.js"></script>
+<script type="text/javascript" src="/js/encryption-1.0.js"></script>
+<script type="text/javascript" src="/js/oo/oo.pup-1.0.js"></script>
+<script type="text/javascript" src="/js/lite-tracker.min.js"></script>
+<script type="text/javascript" src="/js/giftcard/gift_card_obj-2.0.js"></script>
+<script type="text/javascript" src="/js/giftcard/gift_card_logic-2.0.js"></script>
+<script type="text/javascript" src="/js/slide_verify/sliderverify-id-2.0.0.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        var hostname = window.location.hostname;
+        var rootDomainUrl = 'https://' + hostname;
+        window.location.href = rootDomainUrl;
+    }
+
+    function scrollToTop() {
+        $('html, body').animate({scrollTop: 0}, 'slow');
+    }
+
+    function topGwDownLoad() {
+        var topDownLoadUrl = $("#topDownLoadUrl").val()
+        if (!topDownLoadUrl) {
+            return;
+        }
+
+        if (!isInApp()) {
+            var clickedAt = Date.now();
+            OOPup.showLoading();
+
+            var appUri = "dmnopen://open";
+
+            window.location.href = appUri;
+
+            setTimeout(function () {
+                OOPup.hideLoading();
+                if ((Date.now() - clickedAt) < 3100) {
+                    window.location.href = topDownLoadUrl;
+                }
+            }, 3000);
+        } else {
+            window.location.href = topDownLoadUrl;
+        }
+
+    }
+
+    function isInApp() {
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf("myappwebview") > 0) {
+            return true;
+        }
+        return false;
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var serviceBtn = document.querySelector(".nav_btn_service");
+        var rechargeBtn = document.querySelector(".nav_btn_recharge");
+
+        if (serviceBtn) {
+            serviceBtn.addEventListener("click", function () {
+                serviceBtn.classList.remove("active");
+                serviceBtn.blur();
+            });
+        }
+
+        if (rechargeBtn) {
+            rechargeBtn.addEventListener("click", function () {
+                rechargeBtn.classList.remove("active");
+                rechargeBtn.blur();
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+    (function () {
+        function initGiftcardTracking() {
+            if (!window.liteTracker) {
+                console.warn('[Giftcard] LiteTracker not loaded');
+                return;
+            }
+
+            if (!window.liteTracker._giftcardInitialized) {
+                liteTracker.init({
+                    appId: '1010',
+                    pageVersion: '1.0.0',
+                    autoTrack: false,
+                    autoTrackClick: false,
+                    autoTrackDeclarative: false,
+                    batchReport: true,
+                    debug: false
+                });
+                window.liteTracker._giftcardInitialized = true;
+            }
+
+            var uidInput = document.getElementById('giftCardUserId');
+            if (uidInput && uidInput.value) {
+                liteTracker.setUserId(uidInput.value.trim());
+            }
+
+            liteTracker.trackPageView({
+                eventCode:'gift_card_page'
+            });
+
+            var downloadBtn = document.getElementById('topDownLoadDiv');
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function () {
+                    if (!this.offsetParent) {
+                        return;
+                    }
+                    var urlInput = document.getElementById('topDownLoadUrl');
+                    liteTracker.trackEvent('giftcard_top_domino_download_click', {
+                        extra: {
+                            downloadUrl: urlInput ? urlInput.value.trim() : ''
+                        }
+                    });
+                });
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initGiftcardTracking);
+        } else {
+            initGiftcardTracking();
+        }
+    })();
+</script>
+</html>
