@@ -48,7 +48,12 @@ export default async function handler(req, res) {
       }
     );
 
-    const result = await response.json();
+    const text = await response.text();
+
+return res.status(200).json({
+  receivedUserId: numericUserId,
+  rawResponse: text
+});
 
     if (
       result.code !== "0" ||
