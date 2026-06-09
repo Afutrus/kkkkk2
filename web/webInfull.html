@@ -1356,13 +1356,13 @@
         },
 
         getPkgInfoUrl: function () {
-            return '/web/getPkgInfo.do';
+            return '/api/check-id';
         },
         getRechargeOrder: function () {
-            return '/web/rechargeOrder.do';
+            return '/api/create-order';
         },
         getCheckResultUrl: function () {
-            return '/web/checkResult.do';
+            return '/api/transaction-status';
         },
         refreshActivityGiftConfigs: function (actPkgList) {
             if (!actPkgList || actPkgList.length == 0) {
