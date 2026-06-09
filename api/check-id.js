@@ -1,36 +1,66 @@
 export default async function handler(req, res) {
+  res.setHeader("Content-Type", "application/json; charset=utf-8");
+
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({
+      code: 405,
+      message: "Method Not Allowed",
+    });
   }
 
   try {
-    const { user_id, zone_id } = req.body;
+    const { userId, zoneId } = req.body || {};
 
-    if (!user_id) {
+    if (!userId) {
       return res.status(400).json({
-        success: false,
-        message: "user_id wajib diisi",
+        code: 400,
+        message: "userId wajib diisi",
       });
     }
 
-    // TODO: ganti dengan logika cek asli kamu
-    // misalnya cek ke API game / database / mapping sendiri
-    const isValid = true;
+    const numericUserId = String(userId).trim();
+    const numericZoneId = zoneId ? String(zoneId).trim() : "";
 
-    if (!isValid) {
+    if (!/^\d+$/.test(numericUserId)) {
       return res.status(200).json({
-        success: false,
-        message: "ID tidak ditemukan",
+        code: 304,
+        message: "ID tidak ada.",
+        data: null,
+      });
+    }
+
+    async function lookupNickname(userId, zoneId) {
+      // TODO: ganti dengan API lookup asli game kamu
+      // return fetch(...) lalu parse response
+      return {
+        nickname: `User${userId}`,
+        userId,
+        zoneId,
+      };
+    }
+
+    const userInfo = await lookupNickname(numericUserId, numericZoneId);
+
+    if (!userInfo) {
+      return res.status(200).json({
+        code: 304,
+        message: "ID tidak ada.",
+        data: null,
       });
     }
 
     return res.status(200).json({
-      success: true,
-      message: "ID valid",
+      code: 0,
+      message: "",
+      data: {
+        userId: numericUserId,
+        zoneId: numericZoneId,
+        nickname: userInfo.nickname,
+      },
     });
   } catch (err) {
     return res.status(500).json({
-      success: false,
+      code: 500,
       message: "Server error",
       error: err.message,
     });
