@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { userId, zoneId } = req.body || {};
+    const { userId } = req.body || {};
 
     if (!userId) {
       return res.status(400).json({
@@ -19,7 +19,6 @@ export default async function handler(req, res) {
     }
 
     const numericUserId = String(userId).trim();
-    const numericZoneId = zoneId ? String(zoneId).trim() : "";
 
     if (!/^\d+$/.test(numericUserId)) {
       return res.status(200).json({
@@ -29,19 +28,33 @@ export default async function handler(req, res) {
       });
     }
 
-    async function lookupNickname(userId, zoneId) {
-      // TODO: ganti dengan API lookup asli game kamu
-      // return fetch(...) lalu parse response
-      return {
-        nickname: `User${userId}`,
-        userId,
-        zoneId,
-      };
-    }
+    const formData = new URLSearchParams({
+      userId: numericUserId,
+      costKey: "com.neptune.domino.coincard0035",
+      languageType: "2",
+      infullType: "40",
+      timestamp: Date.now().toString(),
+    });
 
-    const userInfo = await lookupNickname(numericUserId, numericZoneId);
+    const response = await fetch(
+      "https://www.pulaugame.com/web/rechargeOrder.do",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type":
+            "application/x-www-form-urlencoded; charset=UTF-8",
+        },
+        body: formData.toString(),
+      }
+    );
 
-    if (!userInfo) {
+    const result = await response.json();
+
+    if (
+      result.code !== "0" ||
+      !result.data ||
+      !result.data.nickName
+    ) {
       return res.status(200).json({
         code: 304,
         message: "ID tidak ada.",
@@ -54,8 +67,7 @@ export default async function handler(req, res) {
       message: "",
       data: {
         userId: numericUserId,
-        zoneId: numericZoneId,
-        nickname: userInfo.nickname,
+        nickname: result.data.nickName,
       },
     });
   } catch (err) {
