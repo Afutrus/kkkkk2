@@ -1,5 +1,4 @@
 const PRODUCT_MAP = {
-  // GOLD
   "com.neptune.domino.coincard0035": {
     productId: 101,
     name: "IDR5K Gold",
@@ -37,7 +36,6 @@ const PRODUCT_MAP = {
     type: "gold",
   },
 
-  // DIAMOND
   "com.neptune.domino.berliancard0035": {
     productId: 201,
     name: "IDR5K Diamond",
@@ -75,7 +73,6 @@ const PRODUCT_MAP = {
     type: "diamond",
   },
 
-  // FIRST GIFT
   "com.neptune.domino.sc.coincard0099": {
     productId: 301,
     name: "Hadiah Menarik",
@@ -89,7 +86,6 @@ const PRODUCT_MAP = {
     type: "firstGift",
   },
 
-  // ACTIVITY GIFT
   "com.neptune.domino.jr.coincard0035": {
     productId: 401,
     name: "Paket Tahun Baru",
@@ -138,9 +134,9 @@ export default async function handler(req, res) {
       zoneId = "",
       costKey,
       paymentMethod = "qris",
-      slug = "NeoStore",
+      slug = "ROY",
       redirect = "",
-      nickname = "",
+      nickname: nicknameFromBody = "",
     } = req.body || {};
 
     if (!userId) {
@@ -157,6 +153,10 @@ export default async function handler(req, res) {
       });
     }
 
+    const cleanUserId = String(userId).trim();
+    const cleanZoneId = String(zoneId).trim();
+    const nickname = nicknameFromBody || `User${cleanUserId}`;
+
     const product = PRODUCT_MAP[String(costKey).trim()];
 
     if (!product) {
@@ -167,17 +167,14 @@ export default async function handler(req, res) {
       });
     }
 
-    const cleanUserId = String(userId).trim();
-    const cleanZoneId = String(zoneId).trim();
     const amount = product.amount;
     const orderId = makeOrderId(cleanUserId, product.productId);
 
-    const defaultRedirect = 
-    redirect ||
+    const defaultRedirect =
+      redirect ||
       `https://your-domain.com/success.html?userId=${encodeURIComponent(cleanUserId)}&productId=${product.productId}&amount=${amount}`;
 
-    const payUrl =
-      `https://app.pakasir.com/pay/${encodeURIComponent(slug)}/${amount}` +
+    const payUrl =`https://app.pakasir.com/pay/${encodeURIComponent(slug)}/${amount}` +
       `?order_id=${encodeURIComponent(orderId)}` +
       `&qris_only=1` +
       `&redirect=${encodeURIComponent(defaultRedirect)}`;
