@@ -696,15 +696,16 @@ var WebInfull = {
     },
 
     commitOrder: function () {
-        WebInfull.hideSureDiv();
-        if (WebInfull.centerInfullType == 'UPOINT') {
-            upoint.pay(WebInfull.payUrl);
-        } else {
-            window.open(WebInfull.payUrl);
-        }
+    WebInfull.hideSureDiv();
 
-        WebInfull.showPayResultDiv();
-    },
+    if (!WebInfull.payUrl) {
+        WebInfull.showTips("URL pembayaran tidak ditemukan.");
+        return;
+    }
+
+    window.location.href = WebInfull.payUrl;
+    WebInfull.showPayResultDiv();
+},
 
     checkReult: function () {
         WebInfull.hidePayResultDiv();
