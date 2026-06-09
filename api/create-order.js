@@ -138,11 +138,10 @@ export default async function handler(req, res) {
       zoneId = "",
       costKey,
       paymentMethod = "qris",
-      slug = "ROY",
+      slug = "NeoStore",
       redirect = "",
-      nickname: nicknameFromBody = "",
+      nickname = "",
     } = req.body || {};
-    const nickname = nicknameFromBody || `User${cleanUserId}`;
 
     if (!userId) {
       return res.status(400).json({
@@ -173,8 +172,8 @@ export default async function handler(req, res) {
     const amount = product.amount;
     const orderId = makeOrderId(cleanUserId, product.productId);
 
-    const defaultRedirect =
-      redirect ||
+    const defaultRedirect = 
+    redirect ||
       `https://your-domain.com/success.html?userId=${encodeURIComponent(cleanUserId)}&productId=${product.productId}&amount=${amount}`;
 
     const payUrl =
