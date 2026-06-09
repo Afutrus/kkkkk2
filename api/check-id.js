@@ -50,16 +50,19 @@ export default async function handler(req, res) {
 
     const text = await response.text();
 
-return res.status(200).json({
-  receivedUserId: numericUserId,
-  rawResponse: text
-});
+    let result;
 
-    if (
-      result.code !== "0" ||
-      !result.data ||
-      !result.data.nickName
-    ) {
+    try {
+      result = JSON.parse(text);
+    } catch (e) {
+      return res.status(500).json({
+        code: 500,
+        message: "Response tidak valid",
+        rawResponse: text,
+      });
+    }
+
+    if (!result?.data?.nickName) {
       return res.status(200).json({
         code: 304,
         message: "ID tidak ada.",
