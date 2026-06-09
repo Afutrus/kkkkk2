@@ -154,8 +154,44 @@ export default async function handler(req, res) {
     }
 
     const cleanUserId = String(userId).trim();
-    const cleanZoneId = String(zoneId).trim();
-    const nickname = nicknameFromBody || `User${cleanUserId}`;
+const cleanZoneId = String(zoneId).trim();
+
+let nickname = nicknameFromBody;
+
+if (!nickname) {
+  const formData = new URLSearchParams({
+    userId: cleanUserId,
+    costKey: "com.neptune.domino.coincard0035",
+    languageType: "2",
+    infullType: "40",
+    timestamp: Date.now().toString(),
+  });
+
+  const lookupResponse = await fetch(
+    "https://www.pulaugame.com/web/rechargeOrder.do",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type":
+          "application/x-www-form-urlencoded; charset=UTF-8",
+      },
+      body: formData.toString(),
+    }
+  );
+
+  const lookupText = await lookupResponse.text();
+  const lookupResult = JSON.parse(lookupText);
+
+  if (!lookupResult?.data?.nickName) {
+    return res.status(200).json({
+      code: 304,
+      message: "ID tidak ditemukan.",
+      data: null,
+    });
+  }
+
+  nickname = lookupResult.data.nickName;
+}
 
     const product = PRODUCT_MAP[String(costKey).trim()];
 
