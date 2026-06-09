@@ -140,8 +140,9 @@ export default async function handler(req, res) {
       paymentMethod = "qris",
       slug = "ROY",
       redirect = "",
-      nickname = "",
+      nickname: nicknameFromBody = "",
     } = req.body || {};
+    const nickname = nicknameFromBody || `User${cleanUserId}`;
 
     if (!userId) {
       return res.status(400).json({
