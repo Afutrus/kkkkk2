@@ -5,6 +5,11 @@ html {
     font-size: 62.5%;
 }
 
+.price-dot{
+    width:.10rem;
+    background-image:url(/images/website/new2025/webInfull/num_regNum_comma.png);
+}
+
 body {
     margin: 0;
     font-size: .3rem;
