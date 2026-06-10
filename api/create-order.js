@@ -1,40 +1,45 @@
 const PRODUCT_MAP = {
-  "com.neptune.domino.coincard0035": {
-    productId: 101,
-    name: "IDR5K Gold",
-    amount: 5000,
-    type: "gold",
-  },
-  "com.neptune.domino.coincard0066": {
-    productId: 102,
-    name: "IDR10K Gold",
-    amount: 10000,
-    type: "gold",
-  },
-  "com.neptune.domino.coincard0199": {
-    productId: 103,
-    name: "IDR30K Gold",
-    amount: 30000,
-    type: "gold",
-  },
-  "com.neptune.domino.coincard0399": {
-    productId: 104,
-    name: "IDR60K Gold",
-    amount: 60000,
-    type: "gold",
-  },
-  "com.neptune.domino.coincard1666": {
-    productId: 105,
-    name: "IDR250K Gold",
-    amount: 250000,
-    type: "gold",
-  },
-  "com.neptune.domino.coincard3333": {
-    productId: 106,
-    name: "IDR500K Gold",
-    amount: 500000,
-    type: "gold",
-  },
+"com.neptune.domino.coincard0035": {
+  productId: 101,
+  name: "IDR26.5K Gold",
+  amount: 26500,
+  type: "gold",
+},
+
+"com.neptune.domino.coincard0066": {
+  productId: 102,
+  name: "IDR55K Gold",
+  amount: 55000,
+  type: "gold",
+},
+
+"com.neptune.domino.coincard0199": {
+  productId: 103,
+  name: "IDR165K Gold",
+  amount: 165000,
+  type: "gold",
+},
+
+"com.neptune.domino.coincard0399": {
+  productId: 104,
+  name: "IDR165K Gold",
+  amount: 165000,
+  type: "gold",
+},
+
+"com.neptune.domino.coincard1666": {
+  productId: 105,
+  name: "IDR265K Gold",
+  amount: 265000,
+  type: "gold",
+},
+
+"com.neptune.domino.coincard3333": {
+  productId: 106,
+  name: "IDR530K Gold",
+  amount: 530000,
+  type: "gold",
+},
 
   "com.neptune.domino.berliancard0035": {
     productId: 201,
