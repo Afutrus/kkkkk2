@@ -45,8 +45,10 @@ function formatImageNumberStr(num) {
     if (!num) {
         return num;
     }
+
     var numHtml = "";
-    var numStr = formatNumberStr(num);
+    var numStr = formatNumberStr(num).replace(".", ",");
+
     for (var i = 0; i < numStr.length; i++) {
         if (numStr[i] == "B") {
             numHtml += '<span class="price-b"></span>';
@@ -54,11 +56,23 @@ function formatImageNumberStr(num) {
             numHtml += '<span class="price-m"></span>';
         } else if (numStr[i] == "K") {
             numHtml += '<span class="price-k"></span>';
+        } else if (numStr[i] == ",") {
+            numHtml += '<span class="price-comma"></span>';
         } else {
             numHtml += '<span class="price-0' + numStr[i] + '"></span>';
         }
     }
     return numHtml;
+}
+
+.price-k{
+    width: .29rem;
+    background-image: url(/images/website/new2025/webInfull/num_price_k.png);
+}
+
+.price-comma{
+    width: .10rem;
+    background-image: url(/images/website/new2025/webInfull/num_regNum_comma.png);
 }
 
 function GoldProductItem(productConfig, productPayments) {
