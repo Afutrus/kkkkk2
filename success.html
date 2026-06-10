@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Pembayaran Berhasil</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    width:90%;
+    max-width:420px;
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.icon{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.success{
+    color:#22c55e;
+}
+
+.title{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.info{
+    background:#334155;
+    border-radius:12px;
+    padding:15px;
+    margin-top:20px;
+    text-align:left;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#22c55e;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="icon success">✓</div>
+
+    <div class="title">Pembayaran Berhasil</div>
+
+    <p>Pesanan Anda telah berhasil diproses.</p>
+
+    <div class="info">
+        <div class="row">
+            <span>User ID</span>
+            <span id="userId">-</span>
+        </div>
+
+        <div class="row">
+            <span>Produk</span>
+            <span id="productId">-</span>
+        </div>
+
+        <div class="row">
+            <span>Nominal</span>
+            <span id="amount">-</span>
+        </div>
+
+        <div class="row">
+            <span>Transaksi</span>
+            <span id="trx">-</span>
+        </div>
+    </div>
+
+    <a href="/" class="btn">Kembali</a>
+
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+
+document.getElementById("userId").textContent =
+    params.get("userId") || "-";
+
+document.getElementById("productId").textContent =
+    params.get("productId") || "-";
+
+document.getElementById("trx").textContent =
+    params.get("tr_uuid") || "-";
+
+const amount = Number(params.get("amount") || 0);
+
+document.getElementById("amount").textContent =
+    "Rp " + amount.toLocaleString("id-ID");
+</script>
+
+</body>
+</html>
