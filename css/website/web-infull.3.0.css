@@ -1280,3 +1280,7 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none !important;
     margin: 0 !important;
 }
+/* Sembunyikan metode SMS */
+[item-group="sms"]{
+    display:none !important;
+}
