@@ -213,7 +213,7 @@ if (!nickname) {
 
     const defaultRedirect =
       redirect ||
-      `https://kkkkk2.vercel.app/success.html?userId=${encodeURIComponent(cleanUserId)}&productId=${product.productId}&amount=${amount}`;
+      `https://www.higgsgames.web.id/success.html?userId=${encodeURIComponent(cleanUserId)}&productId=${product.productId}&amount=${amount}`;
 
     const payUrl =`https://app.pakasir.com/pay/${encodeURIComponent(slug)}/${amount}` +
       `?order_id=${encodeURIComponent(orderId)}` +
