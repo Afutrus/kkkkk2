@@ -45,19 +45,29 @@ function formatImageNumberStr(num) {
     if (!num) {
         return num;
     }
+
     var numHtml = "";
     var numStr = formatNumberStr(num);
+
     for (var i = 0; i < numStr.length; i++) {
-        if (numStr[i] == "B") {
+
+        if (numStr[i] == ".") {
+            numHtml += '.';
+        }
+        else if (numStr[i] == "B") {
             numHtml += '<span class="price-b"></span>';
-        } else if (numStr[i] == "M") {
+        }
+        else if (numStr[i] == "M") {
             numHtml += '<span class="price-m"></span>';
-        } else if (numStr[i] == "K") {
+        }
+        else if (numStr[i] == "K") {
             numHtml += '<span class="price-k"></span>';
-        } else {
+        }
+        else {
             numHtml += '<span class="price-0' + numStr[i] + '"></span>';
         }
     }
+
     return numHtml;
 }
 
