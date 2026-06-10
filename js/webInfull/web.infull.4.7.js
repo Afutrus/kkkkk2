@@ -52,8 +52,8 @@ function formatImageNumberStr(num) {
     for (var i = 0; i < numStr.length; i++) {
 
         if (numStr[i] == ".") {
-            numHtml += '.';
-        }
+        numHtml += '<span class="price-dot"></span>';
+    }
         else if (numStr[i] == "B") {
             numHtml += '<span class="price-b"></span>';
         }
